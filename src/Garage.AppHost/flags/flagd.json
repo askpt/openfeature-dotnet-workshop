@@ -1,0 +1,45 @@
+{
+  "$schema": "https://flagd.dev/schema/v0/flags.json",
+  "flags": {
+    "SlowOperationDelay": {
+      "state": "ENABLED",
+      "variants": {
+        "0": 0,
+        "500": 500,
+        "1000": 1000,
+        "2000": 2000,
+        "5000": 5000
+      },
+      "defaultVariant": "1000"
+    },
+    "EnableStatsHeader": {
+      "state": "ENABLED",
+      "variants": {
+        "on": true,
+        "off": false
+      },
+      "defaultVariant": "on",
+      "targeting": {
+        "if": [
+          {
+            "==": [
+              {
+                "var": "user"
+              },
+              "1"
+            ]
+          },
+          "on"
+        ]
+      }
+    },
+    "EnableDatabaseWinners": {
+      "state": "ENABLED",
+      "variants": {
+        "on": true,
+        "off": false
+      },
+      "defaultVariant": "off"
+    }
+  }
+}
