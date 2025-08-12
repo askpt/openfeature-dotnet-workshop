@@ -20,7 +20,7 @@ time with each exercise and don't hesitate to experiment!
 
 ## Exercise 1: Basic Feature Flags
 
-**Goal**: Implement your first feature flag and understand the basics
+**Goal**: Implement your first feature flag (without OpenFeature) and understand the basics
 
 ### What You'll Learn
 
@@ -57,6 +57,10 @@ time with each exercise and don't hesitate to experiment!
 ### Expected Outcome
 
 You should see the statistics header toggle on and off based on your feature flag value.
+
+### Learning Outcomes
+
+- Understand that feature flags are an application development practice that can be impemented basically (but as we'll see, can also become quite powerful and complex).
 
 ---
 
@@ -99,6 +103,10 @@ You should see the statistics header toggle on and off based on your feature fla
 
 You will have a basic OpenFeature integration that allows you to manage feature flags dynamically. You should
 see the custom provider in action, and the feature flags should be evaluated based on the user context.
+
+### Learning Outcomes
+
+- Understand that OpenFeature can be powered by any underlying "backend", as long as it can resolve feature flag values.
 
 ---
 
@@ -145,6 +153,10 @@ see the custom provider in action, and the feature flags should be evaluated bas
 You will have integrated the `flagd` provider into your OpenFeature setup, allowing you to manage feature flags
 dynamically using an external service. You should be able to modify flags in the `flagd.json` file and see the changes
 reflected in real-time without restarting the application.
+
+### Learning Outcomes
+
+- Understand that flagd is an OpenFeature-compatible backend for feature flags
 
 ---
 
@@ -252,7 +264,7 @@ You'll see how feature flags can safely control major architectural decisions an
 1. Use the flag `EnableStatsHeader`
 
    - Using the `EnableStatsHeader` flag, implement a simple A/B test
-   - Use the `EvaluationContext` to differentiate between users, making sure to use the `_userId` property
+   - Use the `EvaluationContext` to differentiate between users, making sure to use the `_userId` property as the targetingKey
    - Change the localStorage value for `userId` to simulate different users
    - Observe how the tabs are displayed in the web application
 
@@ -309,6 +321,11 @@ You will have integrated telemetry for feature flags, allowing you to monitor th
 
 - Implement custom hooks for feature flag evaluations
 - Use hooks to log flag evaluation behavior (see https://openfeature.dev/docs/reference/concepts/hooks/)
+
+## Extra Exercises: Event Hnadlers
+
+- Add an event handler to listen to flag changes
+- Use Events Listeners to dynamically change { something - could be global log level or something like that; anything that doesn't require a request } 
 
 ---
 
