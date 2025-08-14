@@ -341,8 +341,7 @@ You will have integrated telemetry for feature flags, allowing you to monitor th
 
 ## Extra Exercises: Event Handlers
 
-- Add an event handler to listen to flag changes
-- Use Events Listeners to dynamically change { something - could be global log level or something like that; anything that doesn't require a request } 
+- Add an event handler to listen to flag changes (see https://openfeature.dev/specification/sections/events)
 
 ---
 
