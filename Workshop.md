@@ -60,7 +60,7 @@ You should see the statistics header toggle on and off based on your feature fla
 
 ### Learning Outcomes
 
-- Understand that feature flags are an application development practice that can be impemented basically (but as we'll see, can also become quite powerful and complex).
+- Understand that feature flags are an application development practice that can be implemented basically (but as we'll see, can also become quite powerful and complex).
 
 ---
 
@@ -204,6 +204,10 @@ reflected in real-time without restarting the application.
 
 You'll understand how integer flags can control performance characteristics and see real-time impact on application behavior.
 
+### Learning Outcomes
+- Understand that feature flags can be used to control performance characteristics in real-time
+- Understand that feature flags can have multiple types, including integers, strings, and booleans
+
 ---
 
 ## Exercise 5: Data Source Switching
@@ -248,6 +252,10 @@ You'll understand how integer flags can control performance characteristics and 
 
 You'll see how feature flags can safely control major architectural decisions and enable smooth data migrations.
 
+### Learning Outcomes
+- Understand that feature flags can be used to control major architectural decisions, such as data sources
+- Understand that feature flags can be used in combination to create complex feature configurations
+
 ---
 
 ## Exercise 6: A/B Testing Implementation
@@ -277,6 +285,11 @@ You'll see how feature flags can safely control major architectural decisions an
 ### Expected Outcome
 
 You will have implemented a basic A/B test using feature flags, allowing you to control which users see different variants of the application.
+
+### Learning Outcomes
+
+- Understand that feature flags can be used for A/B testing, allowing you to experiment with different user experiences
+- Understand that feature flags can be used to control the behavior of the application based on user attributes
 
 ---
 
@@ -309,6 +322,10 @@ You will have implemented a basic A/B test using feature flags, allowing you to 
 
 You will have integrated telemetry for feature flags, allowing you to monitor their usage and performance in the Aspire dashboard.
 
+### Learning Outcomes
+- Understand that feature flags can be monitored and analyzed using hooks
+- Understand that feature flags can be visualized in any OTEL compatible dashboard using telemetry data
+
 ---
 
 ## Extra Exercises: Advanced Targeting
@@ -322,7 +339,7 @@ You will have integrated telemetry for feature flags, allowing you to monitor th
 - Implement custom hooks for feature flag evaluations
 - Use hooks to log flag evaluation behavior (see https://openfeature.dev/docs/reference/concepts/hooks/)
 
-## Extra Exercises: Event Hnadlers
+## Extra Exercises: Event Handlers
 
 - Add an event handler to listen to flag changes
 - Use Events Listeners to dynamically change { something - could be global log level or something like that; anything that doesn't require a request } 
