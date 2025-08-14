@@ -1,6 +1,6 @@
+using System.Text.Json;
 using Garage.Shared.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Text.Json;
 
 namespace Garage.ApiService.Data;
 
