@@ -205,6 +205,7 @@ reflected in real-time without restarting the application.
 You'll understand how integer flags can control performance characteristics and see real-time impact on application behavior.
 
 ### Learning Outcomes
+
 - Understand that feature flags can be used to control performance characteristics in real-time
 - Understand that feature flags can have multiple types, including integers, strings, and booleans
 
@@ -253,6 +254,7 @@ You'll understand how integer flags can control performance characteristics and 
 You'll see how feature flags can safely control major architectural decisions and enable smooth data migrations.
 
 ### Learning Outcomes
+
 - Understand that feature flags can be used to control major architectural decisions, such as data sources
 - Understand that feature flags can be used in combination to create complex feature configurations
 
@@ -273,7 +275,7 @@ You'll see how feature flags can safely control major architectural decisions an
 
    - Using the `EnableStatsHeader` flag, implement a simple A/B test
    - Use the `EvaluationContext` to differentiate between users, making sure to use the `_userId` property as the targetingKey
-   - Change the localStorage value for `userId` to simulate different users
+   - Use the "Change User ID" button on the homepage to simulate different users by changing your user ID
    - Observe how the tabs are displayed in the web application
 
 2. Create a new configuration in flagd for `EnableTabs`
@@ -323,6 +325,7 @@ You will have implemented a basic A/B test using feature flags, allowing you to 
 You will have integrated telemetry for feature flags, allowing you to monitor their usage and performance in the Aspire dashboard.
 
 ### Learning Outcomes
+
 - Understand that feature flags can be monitored and analyzed using hooks
 - Understand that feature flags can be visualized in any OTEL compatible dashboard using telemetry data
 
