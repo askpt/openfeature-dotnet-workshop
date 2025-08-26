@@ -91,7 +91,7 @@ You should see the statistics header toggle on and off based on your feature fla
    - Use the `FeatureProvider` flags. Tip: You can copy the dictionary from `FeatureFlags.cs` to start
    - Add the provider to the OpenFeature configuration in `Extensions.cs`
 
-4. Replace the IFeatureFlags depenency injection
+4. Replace the IFeatureFlags dependency injection
 
    - Modify the usages of `IFeatureFlags` interface to use OpenFeature `IFeatureClient` instead
 
