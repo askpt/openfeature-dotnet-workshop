@@ -10,6 +10,7 @@ Before starting, make sure you have:
 - Completed the setup instructions in the [README](README.md)
 - The application running via .NET Aspire
 - Access to the Aspire Dashboard at https://localhost:15888
+- Make sure the Docker containers are running
 
 ## Workshop Flow
 
@@ -205,6 +206,7 @@ reflected in real-time without restarting the application.
 You'll understand how integer flags can control performance characteristics and see real-time impact on application behavior.
 
 ### Learning Outcomes
+
 - Understand that feature flags can be used to control performance characteristics in real-time
 - Understand that feature flags can have multiple types, including integers, strings, and booleans
 
@@ -253,6 +255,7 @@ You'll understand how integer flags can control performance characteristics and 
 You'll see how feature flags can safely control major architectural decisions and enable smooth data migrations.
 
 ### Learning Outcomes
+
 - Understand that feature flags can be used to control major architectural decisions, such as data sources
 - Understand that feature flags can be used in combination to create complex feature configurations
 
@@ -323,6 +326,7 @@ You will have implemented a basic A/B test using feature flags, allowing you to 
 You will have integrated telemetry for feature flags, allowing you to monitor their usage and performance in the Aspire dashboard.
 
 ### Learning Outcomes
+
 - Understand that feature flags can be monitored and analyzed using hooks
 - Understand that feature flags can be visualized in any OTEL compatible dashboard using telemetry data
 
