@@ -275,7 +275,7 @@ You'll see how feature flags can safely control major architectural decisions an
 
    - Using the `EnableStatsHeader` flag, implement a simple A/B test
    - Use the `EvaluationContext` to differentiate between users, making sure to use the `_userId` property as the targetingKey
-   - Change the localStorage value for `userId` to simulate different users
+   - Use the "Change User ID" button on the homepage to simulate different users by changing your user ID
    - Observe how the tabs are displayed in the web application
 
 2. Create a new configuration in flagd for `EnableTabs`
