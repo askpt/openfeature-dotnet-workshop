@@ -82,7 +82,7 @@ You should see the statistics header toggle on and off based on your feature fla
 2. Configure OpenFeature in Extensions file
 
    - Open `src/Garage.ServiceDefaults/Extensions.cs`
-   - Add OpenFeature services in the `AddFeatureFlags` method
+   - Add OpenFeature services in the `AddFeatureFlags` method, you can ignore the error for now
 
 3. Implement a Custom Provider
 
@@ -90,9 +90,9 @@ You should see the statistics header toggle on and off based on your feature fla
    - Use the `FeatureProvider` flags. Tip: You can copy the dictionary from `FeatureFlags.cs` to start
    - Add the provider to the OpenFeature configuration in `Extensions.cs`
 
-4. Replace the IFeatureFlags Implementation
+4. Replace the IFeatureFlags depenency injection
 
-   - Modify the `IFeatureFlags` interface to use OpenFeature `IFeatureClient`
+   - Modify the usages of `IFeatureFlags` interface to use OpenFeature `IFeatureClient` instead
 
 5. Make sure to use the UserId in the OpenFeature context
 

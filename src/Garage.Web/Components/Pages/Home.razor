@@ -86,9 +86,6 @@
 
     protected override async Task OnInitializedAsync()
     {
-        // Initialize user ID from local storage
-        await GetUserId();
-
         try
         {
             var winnersArray = await WinnersApi.GetAllWinnersAsync();
@@ -101,6 +98,13 @@
             _winners = [];
             Logger.LogError("Failed to load winners");
         }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        // Initialize user ID from local storage
+        await GetUserId();
+        StateHasChanged();
     }
 
     private async Task GetUserId()
