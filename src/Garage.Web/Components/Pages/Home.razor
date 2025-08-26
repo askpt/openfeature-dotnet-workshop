@@ -43,18 +43,17 @@
     <span class="collection-count">@_winners.Count of @_winners.Count cars</span>
 </div>
 
-    <div class="collection-tabs">
-        <button class="tab-btn @(_activeFilter == FilterType.All ? "active" : "")"
-                @onclick="() => SetFilter(FilterType.All)">All Winners (@_winners.Count)
-        </button>
-        <button class="tab-btn @(_activeFilter == FilterType.Owned ? "active" : "")"
-                @onclick="() => SetFilter(FilterType.Owned)">Owned (@OwnedCount)
-        </button>
-        <button class="tab-btn @(_activeFilter == FilterType.NotOwned ? "active" : "")"
-                @onclick="() => SetFilter(FilterType.NotOwned)">Not Owned (@(_winners.Count - OwnedCount))
-        </button>
-    </div>
-}
+<div class="collection-tabs">
+    <button class="tab-btn @(_activeFilter == FilterType.All ? "active" : "")"
+            @onclick="() => SetFilter(FilterType.All)">All Winners (@_winners.Count)
+    </button>
+    <button class="tab-btn @(_activeFilter == FilterType.Owned ? "active" : "")"
+            @onclick="() => SetFilter(FilterType.Owned)">Owned (@OwnedCount)
+    </button>
+    <button class="tab-btn @(_activeFilter == FilterType.NotOwned ? "active" : "")"
+            @onclick="() => SetFilter(FilterType.NotOwned)">Not Owned (@(_winners.Count - OwnedCount))
+    </button>
+</div>
 
 <div class="car-grid">
     @foreach (var winner in FilteredWinners)
