@@ -88,7 +88,7 @@ You should see the statistics header toggle on and off based on your feature fla
 3. Implement a Custom Provider
 
    - Create a new class `CustomFeatureProvider` in `src/Garage.ServiceDefaults/Providers`
-   - Use the `FeatureProvider` flags. Tip: You can copy the dictionary from `FeatureFlags.cs` to start
+   - Use the `FeatureProvider` flags. Tip: You can copy the dictionary from `FeatureFlags.cs` to start and use the dictionary key as the flag key
    - Add the provider to the OpenFeature configuration in `Extensions.cs`
 
 4. Replace the IFeatureFlags dependency injection
