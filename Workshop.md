@@ -247,7 +247,6 @@ You'll understand how integer flags can control performance characteristics and 
 4. Add Your Own Data
 
    - Add a new winner record to the JSON file
-   - Add a new winner record to the database (you can use the SQLite web frontend)
    - Toggle between sources to see different datasets
 
 ### Expected Outcome
@@ -357,7 +356,7 @@ You will have integrated telemetry for feature flags, allowing you to monitor th
 
 - Ensure .NET 9.0 SDK is installed
 - Check that all NuGet packages are restored
-- Verify Redis is running (if using external Redis)
+- Verify docker is running (if using external Redis)
 
 **Feature flags not updating**
 
