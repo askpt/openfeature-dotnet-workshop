@@ -14,7 +14,7 @@
     <ItemGroup>
         <PackageReference Include="Aspire.StackExchange.Redis.DistributedCaching" Version="9.4.1" />
         <PackageReference Include="CommunityToolkit.Aspire.Microsoft.EntityFrameworkCore.Sqlite"
-            Version="9.7.0" />
+            Version="9.7.1" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.8" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.8" />
     </ItemGroup>
