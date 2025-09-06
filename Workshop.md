@@ -9,7 +9,7 @@ Before starting, make sure you have:
 
 - Completed the setup instructions in the [README](README.md)
 - The application running via .NET Aspire
-- Access to the Aspire Dashboard at https://localhost:15888
+- Access to the Aspire Dashboard at <https://localhost:15888>
 - Make sure the Docker containers are running
 
 ## Workshop Flow
@@ -92,7 +92,7 @@ You should see the statistics header toggle on and off based on your feature fla
 3. Implement a Custom Provider
 
    - Create a new class `CustomFeatureProvider` in `src/Garage.ServiceDefaults/Providers`
-   - Use the `FeatureProvider` base class. Tip: You can implement a dictionary with the same flag keys and default values as used in the environment variables
+   - Look at the `FeatureProvider` base class. Tip: You can try access the environment variables directly in the `CustomFeatureProvider` class
    - Add the provider to the OpenFeature configuration in `Extensions.cs`
 
 4. Replace the IFeatureFlags dependency injection
@@ -203,7 +203,7 @@ reflected in real-time without restarting the application.
 
    - Consider how you might change this value without redeploying
    - Think about gradual rollout scenarios (e.g., 10% of users get faster performance)
-   - Look into https://flagd.dev/playground/ for the fractional rollout feature example
+   - Look into <https://flagd.dev/playground/> for the fractional rollout feature example
 
 ### Expected Outcome
 
@@ -319,7 +319,7 @@ You will have implemented a basic A/B test using feature flags, allowing you to 
 
 2. Visualize Flag Usage
 
-   - Open the Aspire dashboard at https://localhost:15888
+   - Open the Aspire dashboard at <https://localhost:15888>
    - Visit the `Traces` section
    - Look for traces related to feature flag evaluations
    - Check the `Metrics` section for flag usage statistics
@@ -344,11 +344,11 @@ You will have integrated telemetry for feature flags, allowing you to monitor th
 ## Extra Exercises: Custom Hooks
 
 - Implement custom hooks for feature flag evaluations
-- Use hooks to log flag evaluation behavior (see https://openfeature.dev/docs/reference/concepts/hooks/)
+- Use hooks to log flag evaluation behavior (see <https://openfeature.dev/docs/reference/concepts/hooks/>)
 
 ## Extra Exercises: Event Handlers
 
-- Add an event handler to listen to flag changes (see https://openfeature.dev/specification/sections/events)
+- Add an event handler to listen to flag changes (see <https://openfeature.dev/specification/sections/events>)
 
 ---
 
@@ -395,7 +395,7 @@ Congratulations! You've completed the OpenFeature .NET workshop. You should now 
 
 ### Next Steps
 
-- Explore other OpenFeature providers (https://openfeature.dev/ecosystem)
+- Explore other OpenFeature providers (<https://openfeature.dev/ecosystem>)
 - Implement feature flags in your own applications
 - Join the OpenFeature community
 - Share your experience and learnings
