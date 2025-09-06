@@ -2,14 +2,7 @@ namespace Garage.ServiceDefaults.Services;
 
 public class FeatureFlags : IFeatureFlags
 {
-    private readonly Dictionary<string, object> _flags = new()
-    {
-        { nameof(SlowOperationDelay), 1000 },
-        { nameof(EnableDatabaseWinners), false },
-        { nameof(EnableStatsHeader), true }
-    };
-
-    public int SlowOperationDelay => _flags.TryGetValue(nameof(SlowOperationDelay), out var value) ? (int)value : 1000;
-    public bool EnableDatabaseWinners => _flags.TryGetValue(nameof(EnableDatabaseWinners), out var value) && (bool)value;
-    public bool EnableStatsHeader => _flags.TryGetValue(nameof(EnableStatsHeader), out var value) && (bool)value;
+    public int SlowOperationDelay => int.TryParse(Environment.GetEnvironmentVariable("SLOW_OPERATION_DELAY"), out var delay) ? delay : 1000;
+    public bool EnableDatabaseWinners => bool.TryParse(Environment.GetEnvironmentVariable("ENABLE_DATABASE_WINNERS"), out var enable) && enable;
+    public bool EnableStatsHeader => !bool.TryParse(Environment.GetEnvironmentVariable("ENABLE_STATS_HEADER"), out var enable) || enable; // Default to true
 }

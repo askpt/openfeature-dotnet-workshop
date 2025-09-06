@@ -34,14 +34,14 @@ time with each exercise and don't hesitate to experiment!
 
    - Navigate to `src/Garage.ServiceDefaults/Services/IFeatureFlags.cs`
    - Review the `EnableStatsHeader` flag interface
-   - Look at `FeatureFlags.cs` to see the default implementation
+   - Look at `FeatureFlags.cs` to see the environment variable implementation
 
 2. Toggle the Statistics Header
 
-   - Locate where `EnableStatsHeader` is used in the web application
-   - Change the default value from `true` to `false`
-   - Observe the behavior change in the web frontend
-   - Toggle it back to `true`
+   - Locate the environment variables in `src/Garage.AppHost/Properties/launchSettings.json`
+   - Change the `ENABLE_STATS_HEADER` environment variable from `"true"` to `"false"`
+   - Restart the application to see the behavior change in the web frontend
+   - Toggle it back to `"true"`
 
 3. Verify the Changes
 
@@ -52,7 +52,8 @@ time with each exercise and don't hesitate to experiment!
 4. Create a New Feature Flag
 
    - Add a new boolean flag in `IFeatureFlags.cs` (`EnableTabs`) making sure it is `true`
-   - Implement it in `FeatureFlags.cs`
+   - Implement it in `FeatureFlags.cs` to read from environment variable `ENABLE_TABS`
+   - Add the environment variable to `launchSettings.json` with value `"true"`
    - Use this flag in the `.collection-tabs` div in the `Home.razor` file
 
 ### Expected Outcome
@@ -62,6 +63,9 @@ You should see the statistics header toggle on and off based on your feature fla
 ### Learning Outcomes
 
 - Understand that feature flags are an application development practice that can be implemented basically (but as we'll see, can also become quite powerful and complex).
+- Learn how environment variables can be used to configure feature flags at application startup.
+
+**Note**: In this initial exercise, feature flags are configured using environment variables in the `launchSettings.json` file. Changes require an application restart. Later exercises will introduce dynamic flag updates through OpenFeature.
 
 ---
 
@@ -88,7 +92,7 @@ You should see the statistics header toggle on and off based on your feature fla
 3. Implement a Custom Provider
 
    - Create a new class `CustomFeatureProvider` in `src/Garage.ServiceDefaults/Providers`
-   - Use the `FeatureProvider` flags. Tip: You can copy the dictionary from `FeatureFlags.cs` to start and use the dictionary key as the flag key
+   - Use the `FeatureProvider` base class. Tip: You can implement a dictionary with the same flag keys and default values as used in the environment variables
    - Add the provider to the OpenFeature configuration in `Extensions.cs`
 
 4. Replace the IFeatureFlags dependency injection
@@ -383,10 +387,10 @@ You will have integrated telemetry for feature flags, allowing you to monitor th
 
 Congratulations! You've completed the OpenFeature .NET workshop. You should now understand:
 
-✅ Basic feature flag implementation  
-✅ Performance tuning with feature flags  
-✅ Architectural decisions using flags  
-✅ OpenFeature provider integration  
+✅ Basic feature flag implementation
+✅ Performance tuning with feature flags
+✅ Architectural decisions using flags
+✅ OpenFeature provider integration
 ✅ Advanced targeting and evaluation
 
 ### Next Steps
