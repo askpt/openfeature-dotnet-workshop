@@ -9,7 +9,7 @@ Before starting, make sure you have:
 
 - Completed the setup instructions in the [README](README.md)
 - The application running via .NET Aspire
-- Access to the Aspire Dashboard at https://localhost:15888
+- Access to the Aspire Dashboard at <https://localhost:15888>
 - Make sure the Docker containers are running
 
 ## Workshop Flow
@@ -34,14 +34,14 @@ time with each exercise and don't hesitate to experiment!
 
    - Navigate to `src/Garage.ServiceDefaults/Services/IFeatureFlags.cs`
    - Review the `EnableStatsHeader` flag interface
-   - Look at `FeatureFlags.cs` to see the default implementation
+   - Look at `FeatureFlags.cs` to see the environment variable implementation
 
 2. Toggle the Statistics Header
 
-   - Locate where `EnableStatsHeader` is used in the web application
-   - Change the default value from `true` to `false`
-   - Observe the behavior change in the web frontend
-   - Toggle it back to `true`
+   - Locate the environment variables in `src/Garage.AppHost/Properties/launchSettings.json`
+   - Change the `ENABLE_STATS_HEADER` environment variable from `"true"` to `"false"`
+   - Restart the application to see the behavior change in the web frontend
+   - Toggle it back to `"true"`
 
 3. Verify the Changes
 
@@ -52,7 +52,8 @@ time with each exercise and don't hesitate to experiment!
 4. Create a New Feature Flag
 
    - Add a new boolean flag in `IFeatureFlags.cs` (`EnableTabs`) making sure it is `true`
-   - Implement it in `FeatureFlags.cs`
+   - Implement it in `FeatureFlags.cs` to read from environment variable `ENABLE_TABS`
+   - Add the environment variable to `launchSettings.json` with value `"true"`
    - Use this flag in the `.collection-tabs` div in the `Home.razor` file
 
 ### Expected Outcome
@@ -62,6 +63,9 @@ You should see the statistics header toggle on and off based on your feature fla
 ### Learning Outcomes
 
 - Understand that feature flags are an application development practice that can be implemented basically (but as we'll see, can also become quite powerful and complex).
+- Learn how environment variables can be used to configure feature flags at application startup.
+
+**Note**: In this initial exercise, feature flags are configured using environment variables in the `launchSettings.json` file. Changes require an application restart. Later exercises will introduce dynamic flag updates through OpenFeature.
 
 ---
 
@@ -88,7 +92,7 @@ You should see the statistics header toggle on and off based on your feature fla
 3. Implement a Custom Provider
 
    - Create a new class `CustomFeatureProvider` in `src/Garage.ServiceDefaults/Providers`
-   - Use the `FeatureProvider` flags. Tip: You can copy the dictionary from `FeatureFlags.cs` to start and use the dictionary key as the flag key
+   - Look at the `FeatureProvider` base class. Tip: You can try access the environment variables directly in the `CustomFeatureProvider` class
    - Add the provider to the OpenFeature configuration in `Extensions.cs`
 
 4. Replace the IFeatureFlags dependency injection
@@ -199,7 +203,7 @@ reflected in real-time without restarting the application.
 
    - Consider how you might change this value without redeploying
    - Think about gradual rollout scenarios (e.g., 10% of users get faster performance)
-   - Look into https://flagd.dev/playground/ for the fractional rollout feature example
+   - Look into <https://flagd.dev/playground/> for the fractional rollout feature example
 
 ### Expected Outcome
 
@@ -315,7 +319,7 @@ You will have implemented a basic A/B test using feature flags, allowing you to 
 
 2. Visualize Flag Usage
 
-   - Open the Aspire dashboard at https://localhost:15888
+   - Open the Aspire dashboard at <https://localhost:15888>
    - Visit the `Traces` section
    - Look for traces related to feature flag evaluations
    - Check the `Metrics` section for flag usage statistics
@@ -340,11 +344,11 @@ You will have integrated telemetry for feature flags, allowing you to monitor th
 ## Extra Exercises: Custom Hooks
 
 - Implement custom hooks for feature flag evaluations
-- Use hooks to log flag evaluation behavior (see https://openfeature.dev/docs/reference/concepts/hooks/)
+- Use hooks to log flag evaluation behavior (see <https://openfeature.dev/docs/reference/concepts/hooks/>)
 
 ## Extra Exercises: Event Handlers
 
-- Add an event handler to listen to flag changes (see https://openfeature.dev/specification/sections/events)
+- Add an event handler to listen to flag changes (see <https://openfeature.dev/specification/sections/events>)
 
 ---
 
@@ -383,15 +387,15 @@ You will have integrated telemetry for feature flags, allowing you to monitor th
 
 Congratulations! You've completed the OpenFeature .NET workshop. You should now understand:
 
-✅ Basic feature flag implementation  
-✅ Performance tuning with feature flags  
-✅ Architectural decisions using flags  
-✅ OpenFeature provider integration  
+✅ Basic feature flag implementation
+✅ Performance tuning with feature flags
+✅ Architectural decisions using flags
+✅ OpenFeature provider integration
 ✅ Advanced targeting and evaluation
 
 ### Next Steps
 
-- Explore other OpenFeature providers (https://openfeature.dev/ecosystem)
+- Explore other OpenFeature providers (<https://openfeature.dev/ecosystem>)
 - Implement feature flags in your own applications
 - Join the OpenFeature community
 - Share your experience and learnings
