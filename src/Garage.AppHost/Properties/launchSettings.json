@@ -13,7 +13,7 @@
         "ASPIRE_RESOURCE_SERVICE_ENDPOINT_URL": "https://localhost:22178",
         "SlowOperationDelay": "1000",
         "EnableDatabaseWinners": "false",
-        "EnableStatsHeader": "false"
+        "EnableStatsHeader": "true"
       }
     },
     "http": {
