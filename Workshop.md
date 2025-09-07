@@ -39,7 +39,7 @@ time with each exercise and don't hesitate to experiment!
 2. Toggle the Statistics Header
 
    - Locate the environment variables in `src/Garage.AppHost/Properties/launchSettings.json`
-   - Change the `ENABLE_STATS_HEADER` environment variable from `"true"` to `"false"`
+   - Change the `EnableStatsHeader` environment variable from `"true"` to `"false"`
    - Restart the application to see the behavior change in the web frontend
    - Toggle it back to `"true"`
 
@@ -47,14 +47,13 @@ time with each exercise and don't hesitate to experiment!
 
    - Navigate to the web frontend
    - Confirm the statistics header appears/disappears based on your flag value
-   - Check the Aspire dashboard for any relevant metrics
 
 4. Create a New Feature Flag
 
    - Add a new boolean flag in `IFeatureFlags.cs` (`EnableTabs`) making sure it is `true`
-   - Implement it in `FeatureFlags.cs` to read from environment variable `ENABLE_TABS`
+   - Implement it in `FeatureFlags.cs` to read from environment variable `EnableTabs`
    - Add the environment variable to `launchSettings.json` with value `"true"`
-   - Use this flag in the `.collection-tabs` div in the `Home.razor` file
+   - Use this flag in the `.collection-tabs` div in the `Home.razor` file. Tip: You can use the `ShowHeader` flag as a reference
 
 ### Expected Outcome
 
@@ -87,12 +86,12 @@ You should see the statistics header toggle on and off based on your feature fla
 2. Configure OpenFeature in Extensions file
 
    - Open `src/Garage.ServiceDefaults/Extensions.cs`
-   - Add OpenFeature services in the `AddFeatureFlags` method, you can ignore the error for now
+   - Add OpenFeature services in the `AddFeatureFlags` method
 
 3. Implement a Custom Provider
 
    - Create a new class `CustomFeatureProvider` in `src/Garage.ServiceDefaults/Providers`
-   - Look at the `FeatureProvider` base class. Tip: You can try access the environment variables directly in the `CustomFeatureProvider` class
+   - Look at the `FeatureProvider` base class. Tip: You can try access the environment variables directly in the `CustomFeatureProvider` class. Tip: You can skip implementing the `ResolveStructureValueAsync` method for now
    - Add the provider to the OpenFeature configuration in `Extensions.cs`
 
 4. Replace the IFeatureFlags dependency injection
@@ -102,7 +101,7 @@ You should see the statistics header toggle on and off based on your feature fla
 5. Make sure to use the UserId in the OpenFeature context
 
    - Use the `_userId` property in the `Home.razor` file to set the user context for OpenFeature
-   - Ensure the OpenFeature client is aware of the user context
+   - Ensure the OpenFeature client is aware of the user context. Tip: Have a look at the `EvaluationContext` class.
 
 ### Expected Outcome
 
@@ -151,7 +150,7 @@ see the custom provider in action, and the feature flags should be evaluated bas
 4. Configure the flagd dependents
 
    - Open `src/Garage.AppHost/Program.cs`
-   - Modify the `apiservice` and `webfrontend` services to depend on the `flagd` service
+   - Modify the `apiservice` and `webfrontend` services to wait for the `flagd` service
 
 ### Expected Outcome
 
@@ -179,30 +178,29 @@ reflected in real-time without restarting the application.
 
 1. Understand the SlowOperationDelay Flag
 
-   - Examine the `SlowOperationDelay` property in `IFeatureFlags.cs`
    - Find where this delay is implemented in the API service
-   - Note the default value (1000ms)
 
 2. Experiment with Different Delays
 
+   - Locate the `SlowOperationDelay` flag in `flagd.json`
    - Change the delay to different values:
      - `0` (no delay)
      - `500` (fast)
      - `1000` (default)
      - `2000` (slow)
      - `5000` (very slow)
+   - Add a new integer flag for `SlowOperationDelay` in `flagd.json`. For example: `10000` (time to grab a coffee). Tip: This might break the application, so you can have a look into the aspire dashboard to see the error logs
    - Test each configuration and observe the impact
 
 3. Monitor Performance Impact
 
-   - Use the Aspire dashboard to monitor request times
    - Compare response times with different delay values
    - Note how this affects user experience
 
 4. Implement a Dynamic Configuration
 
    - Consider how you might change this value without redeploying
-   - Think about gradual rollout scenarios (e.g., 10% of users get faster performance)
+   - Think about gradual rollout scenarios (e.g., 90% of users get faster performance)
    - Look into <https://flagd.dev/playground/> for the fractional rollout feature example
 
 ### Expected Outcome
@@ -238,7 +236,7 @@ You'll understand how integer flags can control performance characteristics and 
 2. Test Data Source Switching
 
    - Start with `EnableDatabaseWinners = false` (JSON source)
-   - View the winners data in the web application
+   - Remove the 2024 winner from the JSON file
    - Change to `EnableDatabaseWinners = true` (database source)
    - Compare the data between sources
 
@@ -247,11 +245,6 @@ You'll understand how integer flags can control performance characteristics and 
    - Review how the service gracefully handles the switch
    - Consider error handling scenarios
    - Think about data consistency during transitions
-
-4. Add Your Own Data
-
-   - Add a new winner record to the JSON file
-   - Toggle between sources to see different datasets
 
 ### Expected Outcome
 
@@ -278,7 +271,7 @@ You'll see how feature flags can safely control major architectural decisions an
 1. Use the flag `EnableStatsHeader`
 
    - Using the `EnableStatsHeader` flag, implement a simple A/B test
-   - Use the `EvaluationContext` to differentiate between users, making sure to use the `_userId` property as the targetingKey
+   - Use the `EvaluationContext` to differentiate between users, making sure to use the `_userId` property
    - Use the "Change User ID" button on the homepage to simulate different users by changing your user ID
    - Observe how the tabs are displayed in the web application
 
@@ -286,7 +279,7 @@ You'll see how feature flags can safely control major architectural decisions an
 
    - Add a new flag in `flagd.json` for `EnableTabs`
    - Set it to `true` for some users and `false` for others
-   - Use the `EvaluationContext` to differentiate between users
+   - Don't forget to refresh the browser to see the changes
 
 ### Expected Outcome
 
@@ -319,7 +312,7 @@ You will have implemented a basic A/B test using feature flags, allowing you to 
 
 2. Visualize Flag Usage
 
-   - Open the Aspire dashboard at <https://localhost:15888>
+   - Open the Aspire dashboard
    - Visit the `Traces` section
    - Look for traces related to feature flag evaluations
    - Check the `Metrics` section for flag usage statistics
