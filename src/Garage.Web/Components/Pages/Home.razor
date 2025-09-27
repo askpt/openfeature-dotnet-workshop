@@ -147,8 +147,15 @@
         .Set("user_id", _userId)
         .Build();
         var x = await FeatureFlags.GetBooleanDetailsAsync("EnableStatsHeader", false, evaluationContext);
-        _showHeader = await FeatureFlags.GetBooleanValueAsync("EnableStatsHeader", false, evaluationContext);
-        _showTabs = await FeatureFlags.GetBooleanValueAsync("EnableTabs", false, evaluationContext);
+        var showHeader = await FeatureFlags.GetBooleanValueAsync("EnableStatsHeader", false, evaluationContext);
+        var showTabs = await FeatureFlags.GetBooleanValueAsync("EnableTabs", false, evaluationContext);
+
+        if (showHeader != _showHeader || showTabs != _showTabs)
+        {
+            _showHeader = showHeader;
+            _showTabs = showTabs;
+            StateHasChanged();
+        }
     }
 
     private async Task GetUserId()

@@ -31,7 +31,7 @@
         "on": true,
         "off": false
       },
-      "defaultVariant": "off",
+      "defaultVariant": "on",
       "targeting": {
         "if": [
           {
@@ -47,6 +47,14 @@
       }
     },
     "EnableDatabaseWinners": {
+      "state": "ENABLED",
+      "variants": {
+        "on": true,
+        "off": false
+      },
+      "defaultVariant": "on"
+    },
+    "EnableTabs": {
       "state": "ENABLED",
       "variants": {
         "on": true,
