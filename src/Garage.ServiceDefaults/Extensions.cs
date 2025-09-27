@@ -8,8 +8,9 @@ using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using OpenFeature;
-using OpenFeature.DependencyInjection.Providers.Flagd;
+using OpenFeature.Contrib.Providers.GOFeatureFlag;
 using OpenFeature.Hooks;
+using OpenFeature.Model;
 using OpenTelemetry;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Trace;
@@ -145,16 +146,19 @@ public static class Extensions
         builder.Services.AddOpenFeature(featureBuilder =>
         {
             // Get connection string from configuration
-            var connectionString = builder.Configuration.GetConnectionString("flagd");
-            var hostUri = new Uri(connectionString ?? "http://localhost:8013");
+            var connectionString = builder.Configuration.GetConnectionString("goff");
+
+            // remove Endpoint= from connectionString
+            connectionString = connectionString?.Replace("Endpoint=", "");
+
+            var goffOptions = new GoFeatureFlagProviderOptions
+            {
+                Endpoint = connectionString
+            };
 
             featureBuilder
                 .AddHostedFeatureLifecycle() // From Hosting package
-                .AddFlagdProvider(options =>
-                {
-                    options.Host = hostUri.Host;
-                    options.Port = hostUri.Port;
-                })
+                .AddProvider(_ => new GoFeatureFlagProvider(goffOptions))
                 .AddHook<TraceEnricherHook>()
                 .AddHook<MetricsHook>();
         });

@@ -11,15 +11,17 @@ var database = postgres.AddDatabase("garage-db");
 //     // .WithArgs("start", "--uri", "file:./flags/flagd.json")
 //     .WithArgs("start", "--uri", "file:./flags_volume/flagd.json")
 //     .WithEndpoint(8013, 8013);
-var flagd = builder.AddFlagd("flagd").WithLogging().WithFlagdVolume();
+var goff = builder.AddGoFeatureFlag("goff")
+    .WithGoffBindMount("./goff")
+    .WithDataVolume();
 
 var apiService = builder.AddProject<Projects.Garage_ApiService>("apiservice")
     .WithReference(database)
     .WaitFor(database)
     .WithReference(cache)
     .WaitFor(cache)
-    .WithReference(flagd)
-    .WaitFor(flagd)
+    .WithReference(goff)
+    .WaitFor(goff)
     .WithHttpHealthCheck("/health");
 
 builder.AddProject<Projects.Garage_Web>("webfrontend")
@@ -27,8 +29,8 @@ builder.AddProject<Projects.Garage_Web>("webfrontend")
     .WithHttpHealthCheck("/health")
     .WithReference(cache)
     .WaitFor(cache)
-    .WithReference(flagd)
-    .WaitFor(flagd)
+    .WithReference(goff)
+    .WaitFor(goff)
     .WithReference(apiService)
     .WaitFor(apiService);
 

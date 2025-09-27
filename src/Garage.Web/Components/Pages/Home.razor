@@ -8,58 +8,51 @@
 @inject ILogger<Home> Logger
 @inject IFeatureClient FeatureFlags
 @inject IJSRuntime JsRuntime
-@rendermode InteractiveServer
+@rendermode @(new InteractiveServerRenderMode(prerender: false))
 
 <PageTitle>Le Mans Collection Tracker</PageTitle>
 
-@if (ShowHeader)
-{
-    <div class="garage-header">
-        <div class="header-top">
-            <div class="title-section">
-                <span class="garage-icon">🏆</span>
-                <h1>Le Mans Collection Tracker</h1>
-                <p class="subtitle">Track your model car winners collection of racing legends from the 24h of Le Mans</p>
+<div class="garage-header">
+    <div class="header-top">
+        <div class="title-section">
+            <span class="garage-icon">🏆</span>
+            <h1>Le Mans Collection Tracker</h1>
+            <p class="subtitle">Track your model car winners collection of racing legends from the 24h of Le Mans</p>
+        </div>
+        <div class="stats-section">
+            <div class="stat-item owned">
+                <span class="stat-number">@OwnedCount</span>
+                <span class="stat-label">Owned</span>
             </div>
-            <div class="stats-section">
-                <div class="stat-item owned">
-                    <span class="stat-number">@OwnedCount</span>
-                    <span class="stat-label">Owned</span>
-                </div>
-                <div class="stat-item owned">
-                    <span class="stat-number">@_winners.Count</span>
-                    <span class="stat-label">Total</span>
-                </div>
-                <div class="stat-item complete">
-                    <span class="stat-number">@(_winners.Count > 0
-                                            ? Math.Round((double)OwnedCount / _winners.Count * 100, 1)
-                                            : 0)%</span>
-                    <span class="stat-label">Complete</span>
-                </div>
+            <div class="stat-item owned">
+                <span class="stat-number">@_winners.Count</span>
+                <span class="stat-label">Total</span>
+            </div>
+            <div class="stat-item complete">
+                <span class="stat-number">@(_winners.Count > 0
+                                        ? Math.Round((double)OwnedCount / _winners.Count * 100, 1)
+                                        : 0)%</span>
+                <span class="stat-label">Complete</span>
             </div>
         </div>
     </div>
-}
+</div>
 
 <div class="collection-summary">
     <span class="collection-count">@_winners.Count of @_winners.Count cars</span>
-    <button class="btn btn-secondary btn-sm" @onclick="ShowUserIdModal">Change User ID</button>
 </div>
 
-@if (ShowTabs)
-{
-    <div class="collection-tabs">
-        <button class="tab-btn @(_activeFilter == FilterType.All ? "active" : "")"
-            @onclick="() => SetFilter(FilterType.All)">All Winners (@_winners.Count)
-        </button>
-        <button class="tab-btn @(_activeFilter == FilterType.Owned ? "active" : "")"
-            @onclick="() => SetFilter(FilterType.Owned)">Owned (@OwnedCount)
-        </button>
-        <button class="tab-btn @(_activeFilter == FilterType.NotOwned ? "active" : "")"
-            @onclick="() => SetFilter(FilterType.NotOwned)">Not Owned (@(_winners.Count - OwnedCount))
-        </button>
-    </div>
-}
+<div class="collection-tabs">
+    <button class="tab-btn @(_activeFilter == FilterType.All ? "active" : "")"
+        @onclick="() => SetFilter(FilterType.All)">All Winners (@_winners.Count)
+    </button>
+    <button class="tab-btn @(_activeFilter == FilterType.Owned ? "active" : "")"
+        @onclick="() => SetFilter(FilterType.Owned)">Owned (@OwnedCount)
+    </button>
+    <button class="tab-btn @(_activeFilter == FilterType.NotOwned ? "active" : "")"
+        @onclick="() => SetFilter(FilterType.NotOwned)">Not Owned (@(_winners.Count - OwnedCount))
+    </button>
+</div>
 
 <div class="car-grid">
     @foreach (var winner in FilteredWinners)
@@ -68,41 +61,17 @@
     }
 </div>
 
-<!-- User ID Change Modal -->
-@if (_showUserIdModal)
-{
-    <div class="modal-backdrop" @onclick="HideUserIdModal">
-        <div class="modal-content" @onclick:stopPropagation="true">
-            <div class="modal-header">
-                <h5>Change User ID</h5>
-                <button type="button" class="btn-close" @onclick="HideUserIdModal">×</button>
-            </div>
-            <div class="modal-body">
-                <p>Current User ID: <strong>@_userId</strong></p>
-                <label for="newUserId">New User ID:</label>
-                <input type="number" id="newUserId" @bind="_newUserId" class="form-control" min="1" />
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" @onclick="HideUserIdModal">Cancel</button>
-                <button type="button" class="btn btn-primary" @onclick="UpdateUserId">Update</button>
-            </div>
-        </div>
-    </div>
-}
-
 @code {
     private List<Winner> _winners = [];
     private FilterType _activeFilter = FilterType.All;
 
     private int OwnedCount => _winners.Count(c => c.IsOwned);
-    private bool ShowHeader => _showHeader;
-    private bool ShowTabs => _showTabs;
     private int _userId;
     private bool _showUserIdModal;
     private int _newUserId;
 
-    private bool _showHeader;
-    private bool _showTabs;
+    private bool _showHeader = true;
+    private bool _showTabs = true;
 
     private IEnumerable<Winner> FilteredWinners => _activeFilter switch
     {
@@ -134,55 +103,6 @@
         }
     }
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        // Initialize user ID from local storage
-        if (firstRender)
-        {
-            await GetUserId();
-            StateHasChanged();
-        }
-
-        var evaluationContext = EvaluationContext.Builder()
-        .Set("user_id", _userId)
-        .Build();
-        var x = await FeatureFlags.GetBooleanDetailsAsync("EnableStatsHeader", false, evaluationContext);
-        var showHeader = await FeatureFlags.GetBooleanValueAsync("EnableStatsHeader", false, evaluationContext);
-        var showTabs = await FeatureFlags.GetBooleanValueAsync("EnableTabs", false, evaluationContext);
-
-        if (showHeader != _showHeader || showTabs != _showTabs)
-        {
-            _showHeader = showHeader;
-            _showTabs = showTabs;
-            StateHasChanged();
-        }
-    }
-
-    private async Task GetUserId()
-    {
-        try
-        {
-            var userIdString = await JsRuntime.InvokeAsync<string>("localStorage.getItem", "userId");
-            if (!string.IsNullOrEmpty(userIdString) && int.TryParse(userIdString, out var parsedUserId))
-            {
-                _userId = parsedUserId;
-                Logger.LogInformation("Retrieved user ID from local storage: {UserId}", _userId);
-            }
-            else
-            {
-                // Generate a new user ID if none exists
-                _userId = 1;
-                await JsRuntime.InvokeVoidAsync("localStorage.setItem", "userId", _userId.ToString());
-                Logger.LogInformation("Generated new user ID: {UserId}", _userId);
-            }
-        }
-        catch (Exception ex)
-        {
-            Logger.LogWarning(ex, "Failed to retrieve user ID from local storage, using default");
-            _userId = 1; // fallback user ID
-        }
-    }
-
     private void OnOwnershipChanged(Winner car)
     {
         var index = _winners.FindIndex(c => c.Year == car.Year);
@@ -199,30 +119,4 @@
         _activeFilter = filterType;
         StateHasChanged();
     }
-
-    private void ShowUserIdModal()
-    {
-        _newUserId = _userId; // Initialize with current value
-        _showUserIdModal = true;
-        StateHasChanged();
-    }
-
-    private void HideUserIdModal()
-    {
-        _showUserIdModal = false;
-        StateHasChanged();
-    }
-
-    private async Task UpdateUserId()
-    {
-        if (_newUserId > 0)
-        {
-            _userId = _newUserId;
-            await JsRuntime.InvokeVoidAsync("localStorage.setItem", "userId", _userId.ToString());
-            Logger.LogInformation("Updated user ID to: {UserId}", _userId);
-            _showUserIdModal = false;
-            StateHasChanged();
-        }
-    }
-
 }

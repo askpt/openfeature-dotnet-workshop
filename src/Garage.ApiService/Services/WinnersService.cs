@@ -16,9 +16,17 @@ public class WinnersService(
 {
     public async Task<IEnumerable<Winner>> GetAllWinnersAsync()
     {
-        return await featureClient.GetBooleanValueAsync("EnableDatabaseWinners", false)
+        var evaluationContext = EvaluationContext.Builder()
+            .SetTargetingKey(Guid.NewGuid().ToString())
+            .Build();
+
+        var winners = await featureClient.GetBooleanValueAsync("EnableDatabaseWinners", false, evaluationContext)
             ? await GetAllDatabaseWinnersAsync()
             : await GetAllJsonWinnersAsync();
+
+        var count = await featureClient.GetIntegerDetailsAsync("WinnersCount", 5, evaluationContext);
+
+        return winners.Take(count.Value);
     }
 
     private async Task<IEnumerable<Winner>> GetAllDatabaseWinnersAsync()
