@@ -2,6 +2,7 @@ using System.Diagnostics;
 using Garage.ServiceDefaults.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
@@ -143,9 +144,17 @@ public static class Extensions
 
         builder.Services.AddOpenFeature(featureBuilder =>
         {
+            // Get connection string from configuration
+            var connectionString = builder.Configuration.GetConnectionString("flagd");
+            var hostUri = new Uri(connectionString ?? "http://localhost:8013");
+
             featureBuilder
                 .AddHostedFeatureLifecycle() // From Hosting package
-                .AddFlagdProvider()
+                .AddFlagdProvider(options =>
+                {
+                    options.Host = hostUri.Host;
+                    options.Port = hostUri.Port;
+                })
                 .AddHook<TraceEnricherHook>()
                 .AddHook<MetricsHook>();
         });

@@ -31,7 +31,7 @@
         "on": true,
         "off": false
       },
-      "defaultVariant": "on",
+      "defaultVariant": "off",
       "targeting": {
         "if": [
           {

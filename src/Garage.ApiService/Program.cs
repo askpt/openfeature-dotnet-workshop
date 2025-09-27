@@ -11,7 +11,7 @@ builder.AddRedisDistributedCache("cache");
 builder.AddServiceDefaults();
 
 // Add database
-builder.AddSqliteDbContext<GarageDbContext>("garage-db");
+builder.AddNpgsqlDbContext<GarageDbContext>("garage-db");
 
 // Add services to the container.
 builder.Services.AddProblemDetails();
