@@ -16,15 +16,14 @@ function App() {
         const context: EvaluationContext = {
           targetingKey: "targeting-key",
         };
+        OpenFeature.setContext(context);
 
-        OpenFeature.setProvider(
+        await OpenFeature.setProviderAndWait(
           new OFREPWebProvider({
             baseUrl: goffServiceUrl,
-            pollInterval: 60000,
+            pollInterval: 10000,
           })
         );
-
-        OpenFeature.setContext(context);
 
         console.log("OFREP OpenFeature provider initialized with goff service");
       } catch (error) {
