@@ -12,7 +12,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Garage.ApiService\Garage.ApiService.csproj" />
-    <ProjectReference Include="..\Garage.Web\Garage.Web.csproj" />
+    <ProjectReference Include="..\Garage.React\Garage.React.csproj" />
+    <ProjectReference Include="..\Garage.ServiceDefaults\Garage.ServiceDefaults.csproj" />
   </ItemGroup>
 
   <ItemGroup>

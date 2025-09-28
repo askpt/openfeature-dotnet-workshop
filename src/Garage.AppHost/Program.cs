@@ -24,11 +24,9 @@ var apiService = builder.AddProject<Projects.Garage_ApiService>("apiservice")
     .WaitFor(goff)
     .WithHttpHealthCheck("/health");
 
-builder.AddProject<Projects.Garage_Web>("webfrontend")
+builder.AddProject<Projects.Garage_React>("webfrontend")
     .WithExternalHttpEndpoints()
     .WithHttpHealthCheck("/health")
-    .WithReference(cache)
-    .WaitFor(cache)
     .WithReference(goff)
     .WaitFor(goff)
     .WithReference(apiService)
