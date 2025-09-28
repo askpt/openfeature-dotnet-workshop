@@ -24,12 +24,14 @@ var apiService = builder.AddProject<Projects.Garage_ApiService>("apiservice")
     .WaitFor(goff)
     .WithHttpHealthCheck("/health");
 
-builder.AddProject<Projects.Garage_React>("webfrontend")
-    .WithExternalHttpEndpoints()
-    .WithHttpHealthCheck("/health")
+builder.AddNpmApp("webfrontend", "../Garage.React/")
     .WithReference(goff)
     .WaitFor(goff)
     .WithReference(apiService)
-    .WaitFor(apiService);
+    .WaitFor(apiService)
+    .WithEnvironment("BROWSER", "none") // Disable opening browser on npm start
+    .WithHttpEndpoint(env: "VITE_PORT")
+    .WithExternalHttpEndpoints()
+    .PublishAsDockerFile();
 
 builder.Build().Run();
