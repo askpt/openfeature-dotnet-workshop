@@ -9,6 +9,8 @@ const Home = () => {
   const [activeFilter, setActiveFilter] = useState<FilterType>(FilterType.All)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [showHeader, setShowHeader] = useState(true)
+  const [showTabs, setShowTabs] = useState(true)
 
   const ownedCount = winners.filter(w => w.isOwned).length
 
@@ -43,7 +45,28 @@ const Home = () => {
       }
     }
 
+    const loadFeatureFlags = async () => {
+      try {
+        const client = OpenFeature.getClient()
+        
+        // Evaluate feature flags
+        const enableStatsHeader = await client.getBooleanValue('EnableStatsHeader', true)
+        const enableTabs = await client.getBooleanValue('EnableTabs', true)
+        
+        setShowHeader(enableStatsHeader)
+        setShowTabs(enableTabs)
+        
+        console.log('Feature flags loaded:', { enableStatsHeader, enableTabs })
+      } catch (error) {
+        console.warn('Failed to load feature flags:', error)
+        // Use defaults if feature flags fail
+        setShowHeader(true)
+        setShowTabs(true)
+      }
+    }
+
     loadWinners()
+    loadFeatureFlags()
   }, [])
 
   const handleOwnershipChanged = (updatedCar: Winner) => {
@@ -73,56 +96,60 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className="garage-header">
-        <div className="header-top">
-          <div className="title-section">
-            <span className="garage-icon">🏆</span>
-            <div>
-              <h1>Le Mans Collection Tracker</h1>
-              <p className="subtitle">Track your model car winners collection of racing legends from the 24h of Le Mans</p>
+      {showHeader && (
+        <div className="garage-header">
+          <div className="header-top">
+            <div className="title-section">
+              <span className="garage-icon">🏆</span>
+              <div>
+                <h1>Le Mans Collection Tracker</h1>
+                <p className="subtitle">Track your model car winners collection of racing legends from the 24h of Le Mans</p>
+              </div>
             </div>
-          </div>
-          <div className="stats-section">
-            <div className="stat-item owned">
-              <span className="stat-number">{ownedCount}</span>
-              <span className="stat-label">Owned</span>
-            </div>
-            <div className="stat-item owned">
-              <span className="stat-number">{winners.length}</span>
-              <span className="stat-label">Total</span>
-            </div>
-            <div className="stat-item complete">
-              <span className="stat-number">{completionPercentage}%</span>
-              <span className="stat-label">Complete</span>
+            <div className="stats-section">
+              <div className="stat-item owned">
+                <span className="stat-number">{ownedCount}</span>
+                <span className="stat-label">Owned</span>
+              </div>
+              <div className="stat-item owned">
+                <span className="stat-number">{winners.length}</span>
+                <span className="stat-label">Total</span>
+              </div>
+              <div className="stat-item complete">
+                <span className="stat-number">{completionPercentage}%</span>
+                <span className="stat-label">Complete</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
 
       <div className="collection-summary">
         <span className="collection-count">{winners.length} of {winners.length} cars</span>
       </div>
 
-      <div className="collection-tabs">
-        <button 
-          className={`tab-btn ${activeFilter === FilterType.All ? 'active' : ''}`}
-          onClick={() => setFilter(FilterType.All)}
-        >
-          All Winners ({winners.length})
-        </button>
-        <button 
-          className={`tab-btn ${activeFilter === FilterType.Owned ? 'active' : ''}`}
-          onClick={() => setFilter(FilterType.Owned)}
-        >
-          Owned ({ownedCount})
-        </button>
-        <button 
-          className={`tab-btn ${activeFilter === FilterType.NotOwned ? 'active' : ''}`}
-          onClick={() => setFilter(FilterType.NotOwned)}
-        >
-          Not Owned ({winners.length - ownedCount})
-        </button>
-      </div>
+      {showTabs && (
+        <div className="collection-tabs">
+          <button 
+            className={`tab-btn ${activeFilter === FilterType.All ? 'active' : ''}`}
+            onClick={() => setFilter(FilterType.All)}
+          >
+            All Winners ({winners.length})
+          </button>
+          <button 
+            className={`tab-btn ${activeFilter === FilterType.Owned ? 'active' : ''}`}
+            onClick={() => setFilter(FilterType.Owned)}
+          >
+            Owned ({ownedCount})
+          </button>
+          <button 
+            className={`tab-btn ${activeFilter === FilterType.NotOwned ? 'active' : ''}`}
+            onClick={() => setFilter(FilterType.NotOwned)}
+          >
+            Not Owned ({winners.length - ownedCount})
+          </button>
+        </div>
+      )}
 
       <div className="car-grid">
         {filteredWinners.map(winner => (

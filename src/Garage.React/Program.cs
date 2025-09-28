@@ -26,6 +26,38 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Custom middleware to inject environment variables into the index.html
+app.Use(async (context, next) =>
+{
+    if (context.Request.Path == "/" || context.Request.Path == "/index.html")
+    {
+        var config = app.Services.GetRequiredService<IConfiguration>();
+        var goffConnectionString = config.GetConnectionString("goff");
+        var endpoint = goffConnectionString?.Replace("Endpoint=", "") ?? "http://localhost:1031";
+        
+        // Ensure the endpoint has the proper OFREP path
+        if (!endpoint.EndsWith("/ofrep/v1/") && !endpoint.EndsWith("/ofrep/v1"))
+        {
+            endpoint = endpoint.TrimEnd('/') + "/ofrep/v1/";
+        }
+
+        var html = await File.ReadAllTextAsync(Path.Combine(app.Environment.WebRootPath, "index.html"));
+        var scriptTag = $@"<script>
+                window.env = {{
+                    OFREP_ENDPOINT: '{endpoint}'
+                }};
+            </script>
+            </head>";
+        html = html.Replace("</head>", scriptTag);
+
+        context.Response.ContentType = "text/html";
+        await context.Response.WriteAsync(html);
+        return;
+    }
+    await next();
+});
+
 app.UseStaticFiles();
 app.UseRouting();
 

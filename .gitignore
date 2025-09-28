@@ -349,3 +349,5 @@ ASALocalRun/
 !.vscode/launch.json
 !.vscode/extensions.json
 .azure
+src/Garage.React/ClientApp/dist/
+src/Garage.React/wwwroot/assets/index-2lVoC8L5.js

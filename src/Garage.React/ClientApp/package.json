@@ -7,12 +7,16 @@
     "build": "vite build",
     "preview": "vite preview"
   },
-  "keywords": ["lemans", "racing", "collection"],
+  "keywords": [
+    "lemans",
+    "racing",
+    "collection"
+  ],
   "author": "",
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "@openfeature/flagd-web-provider": "^0.7.3",
+    "@openfeature/ofrep-web-provider": "^0.3.3",
     "@openfeature/web-sdk": "^1.6.1",
     "@types/react": "^19.1.15",
     "@types/react-dom": "^19.1.9",
