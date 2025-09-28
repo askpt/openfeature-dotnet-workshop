@@ -12,8 +12,8 @@ var database = postgres.AddDatabase("garage-db");
 //     .WithArgs("start", "--uri", "file:./flags_volume/flagd.json")
 //     .WithEndpoint(8013, 8013);
 var goff = builder.AddGoFeatureFlag("goff")
-    .WithGoffBindMount("./goff")
-    .WithDataVolume();
+    .WithGoffBindMount("./goff");
+// .WithDataVolume();
 
 var apiService = builder.AddProject<Projects.Garage_ApiService>("apiservice")
     .WithReference(database)

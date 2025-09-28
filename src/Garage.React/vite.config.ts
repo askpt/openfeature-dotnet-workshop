@@ -5,6 +5,10 @@ import react from "@vitejs/plugin-react";
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
 
+  const goffServiceUrl = SanitizeUrl(
+    process.env.ConnectionStrings__goff || "https://localhost:8080"
+  );
+
   return {
     plugins: [react()],
     server: {
@@ -26,5 +30,15 @@ export default defineConfig(({ mode }) => {
         input: "./index.html",
       },
     },
+    define: {
+      // Expose the GOFF service URL to the client
+      "import.meta.env.VITE_GOFF_SERVICE_URL": JSON.stringify(goffServiceUrl),
+    },
   };
 });
+
+function SanitizeUrl(goffServiceUrl: string) {
+  // Implement your URL sanitization logic here (Endpoint=https://localhost:8080)
+  // Remove Endpoint= from the URL
+  return goffServiceUrl.replace("Endpoint=", "");
+}

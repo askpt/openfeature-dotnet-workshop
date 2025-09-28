@@ -12,3 +12,15 @@ WinnersCount:
     one-hundred: 100
   defaultRule:
     variation: one-hundred
+EnableStatsHeader:
+  variations:
+    enabled: true
+    disabled: false
+  defaultRule:
+    variation: disabled
+EnableTabs:
+  variations:
+    enabled: true
+    disabled: false
+  defaultRule:
+    variation: disabled
