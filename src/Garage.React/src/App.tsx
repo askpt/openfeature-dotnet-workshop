@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     const initializeFeatureFlags = async () => {
       try {
-        const goffServiceUrl =
+        const ofrepServiceUrl =
           import.meta.env.VITE_GOFF_SERVICE_URL || "https://localhost:8080";
 
         const context: EvaluationContext = {
@@ -20,7 +20,7 @@ function App() {
 
         await OpenFeature.setProviderAndWait(
           new OFREPWebProvider({
-            baseUrl: goffServiceUrl,
+            baseUrl: ofrepServiceUrl,
             pollInterval: 10000,
           })
         );
