@@ -9,6 +9,12 @@ RUN npm install
 
 COPY . .
 
+# Accept build arguments
+ARG VITE_TEST_ENV
+
+# Set them as environment variables for the build
+ENV VITE_TEST_ENV=${VITE_TEST_ENV}
+
 RUN npm run build
 
 FROM nginx:alpine

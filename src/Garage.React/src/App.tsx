@@ -13,6 +13,10 @@ function App() {
         const ofrepServiceUrl =
           import.meta.env.VITE_GOFF_SERVICE_URL || "https://localhost:8080";
 
+        const test = import.meta.env.VITE_TEST_ENV || "not working";
+
+        console.log(test);
+
         const context: EvaluationContext = {
           targetingKey: "targeting-key",
         };

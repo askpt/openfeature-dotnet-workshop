@@ -32,6 +32,12 @@ builder.AddNpmApp("webfrontend", "../Garage.React/")
     .WithEnvironment("BROWSER", "none") // Disable opening browser on npm start
     .WithHttpEndpoint(env: "VITE_PORT")
     .WithExternalHttpEndpoints()
-    .PublishAsDockerFile();
+    .PublishAsDockerFile(containerBuilder =>
+    {
+        // Pass build arguments for Vite build
+        containerBuilder
+            .WithBuildArg("VITE_TEST_ENV", "popcorn");
+    });
+
 
 builder.Build().Run();

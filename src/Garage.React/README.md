@@ -36,3 +36,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ### Troubleshooting
 
 If you encounter problems, check out the [troubleshooting guide](https://vitejs.dev/guide/troubleshooting.html)
+
+
+## TODO:
+- upload flags to volume in azure
