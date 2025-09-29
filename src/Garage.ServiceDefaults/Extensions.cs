@@ -8,9 +8,10 @@ using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using OpenFeature;
-using OpenFeature.Contrib.Providers.GOFeatureFlag;
 using OpenFeature.Hooks;
 using OpenFeature.Model;
+using OpenFeature.Providers.Ofrep;
+using OpenFeature.Providers.Ofrep.Configuration;
 using OpenTelemetry;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Trace;
@@ -151,14 +152,16 @@ public static class Extensions
             // remove Endpoint= from connectionString
             connectionString = connectionString?.Replace("Endpoint=", "");
 
-            var goffOptions = new GoFeatureFlagProviderOptions
+            if (string.IsNullOrWhiteSpace(connectionString))
             {
-                Endpoint = connectionString
-            };
+                throw new ArgumentNullException(connectionString);
+            }
+
+            var ofrepOptions = new OfrepOptions(connectionString);
 
             featureBuilder
                 .AddHostedFeatureLifecycle() // From Hosting package
-                .AddProvider(_ => new GoFeatureFlagProvider(goffOptions))
+                .AddProvider(_ => new OfrepProvider(ofrepOptions))
                 .AddHook<TraceEnricherHook>()
                 .AddHook<MetricsHook>();
         });

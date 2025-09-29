@@ -12,8 +12,8 @@ var database = postgres.AddDatabase("garage-db");
 //     .WithArgs("start", "--uri", "file:./flags_volume/flagd.json")
 //     .WithEndpoint(8013, 8013);
 var goff = builder.AddGoFeatureFlag("goff")
-    .WithGoffBindMount("./goff");
-// .WithDataVolume();
+    .WithGoffBindMount("./goff")
+    .ExcludeFromManifest(); // Don't publish this service
 
 var apiService = builder.AddProject<Projects.Garage_ApiService>("apiservice")
     .WithReference(database)
@@ -35,8 +35,9 @@ builder.AddNpmApp("webfrontend", "../Garage.React/")
     .PublishAsDockerFile(containerBuilder =>
     {
         // Pass build arguments for Vite build
+        var viteTestEnv = builder.Configuration["ViteTestEnv"] ?? "default";
         containerBuilder
-            .WithBuildArg("VITE_TEST_ENV", "popcorn");
+            .WithBuildArg("VITE_TEST_ENV", viteTestEnv);
     });
 
 
