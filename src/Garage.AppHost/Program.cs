@@ -11,22 +11,41 @@ var database = postgres.AddDatabase("garage-db");
 //     // .WithArgs("start", "--uri", "file:./flags/flagd.json")
 //     .WithArgs("start", "--uri", "file:./flags_volume/flagd.json")
 //     .WithEndpoint(8013, 8013);
-var goff = builder.AddGoFeatureFlag("goff")
-    .WithGoffBindMount("./goff")
-    .ExcludeFromManifest(); // Don't publish this service
 
-var apiService = builder.AddProject<Projects.Garage_ApiService>("apiservice")
+// Only add goff service for local development (not during publishing/deployment)
+var isLocalDevelopment = !builder.ExecutionContext.IsPublishMode;
+var goff = isLocalDevelopment
+    ? builder.AddGoFeatureFlag("goff")
+        .WithGoffBindMount("./goff")
+    : null;
+
+var apiServiceBuilder = builder.AddProject<Projects.Garage_ApiService>("apiservice")
     .WithReference(database)
     .WaitFor(database)
     .WithReference(cache)
-    .WaitFor(cache)
-    .WithReference(goff)
-    .WaitFor(goff)
-    .WithHttpHealthCheck("/health");
+    .WaitFor(cache);
 
-builder.AddNpmApp("webfrontend", "../Garage.React/")
-    .WithReference(goff)
-    .WaitFor(goff)
+// Only reference goff in development
+if (isLocalDevelopment && goff != null)
+{
+    apiServiceBuilder = apiServiceBuilder
+        .WithReference(goff)
+        .WaitFor(goff);
+}
+
+var apiService = apiServiceBuilder.WithHttpHealthCheck("/health");
+
+var webFrontendBuilder = builder.AddNpmApp("webfrontend", "../Garage.React/");
+
+// Only reference goff in development
+if (isLocalDevelopment && goff != null)
+{
+    webFrontendBuilder = webFrontendBuilder
+        .WithReference(goff)
+        .WaitFor(goff);
+}
+
+webFrontendBuilder
     .WithReference(apiService)
     .WaitFor(apiService)
     .WithEnvironment("BROWSER", "none") // Disable opening browser on npm start
@@ -39,6 +58,5 @@ builder.AddNpmApp("webfrontend", "../Garage.React/")
         containerBuilder
             .WithBuildArg("VITE_TEST_ENV", viteTestEnv);
     });
-
 
 builder.Build().Run();
