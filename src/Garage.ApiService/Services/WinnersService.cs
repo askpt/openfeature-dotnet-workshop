@@ -20,11 +20,11 @@ public class WinnersService(
             .SetTargetingKey(Guid.NewGuid().ToString())
             .Build();
 
-        var winners = await featureClient.GetBooleanValueAsync("EnableDatabaseWinners", false, evaluationContext)
+        var winners = await featureClient.GetBooleanValueAsync("enable-database-winners", false, evaluationContext)
             ? await GetAllDatabaseWinnersAsync()
             : await GetAllJsonWinnersAsync();
 
-        var count = await featureClient.GetIntegerDetailsAsync("WinnersCount", 5, evaluationContext);
+        var count = await featureClient.GetIntegerDetailsAsync("winners-count", 5, evaluationContext);
 
         return winners.Take(count.Value);
     }

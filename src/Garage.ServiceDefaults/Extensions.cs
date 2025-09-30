@@ -148,9 +148,15 @@ public static class Extensions
         {
             // Get connection string from configuration
             var connectionString = builder.Configuration.GetConnectionString("goff");
-
-            // remove Endpoint= from connectionString
-            connectionString = connectionString?.Replace("Endpoint=", "");
+            if (string.IsNullOrWhiteSpace(connectionString))
+            {
+                connectionString = builder.Configuration["DEVCYCLE:URL"];
+            }
+            else
+            {
+                // remove Endpoint= from connectionString
+                connectionString = connectionString?.Replace("Endpoint=", "");
+            }
 
             if (string.IsNullOrWhiteSpace(connectionString))
             {
@@ -158,6 +164,11 @@ public static class Extensions
             }
 
             var ofrepOptions = new OfrepOptions(connectionString);
+            var serverKey = builder.Configuration["DEVCYCLE:SERVERKEY"];
+            if (!string.IsNullOrWhiteSpace(serverKey))
+            {
+                ofrepOptions.Headers.Add("Authorization", serverKey);
+            }
 
             featureBuilder
                 .AddHostedFeatureLifecycle() // From Hosting package

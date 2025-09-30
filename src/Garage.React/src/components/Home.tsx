@@ -51,14 +51,14 @@ const Home = () => {
         const client = OpenFeature.getClient();
 
         // Evaluate feature flags
-        const enableStatsHeader = await client.getBooleanValue(
-          "EnableStatsHeader",
+        const enableStatsHeader = await client.getBooleanDetails(
+          "enable-stats-header",
           true
         );
-        const enableTabs = await client.getBooleanValue("EnableTabs", true);
+        const enableTabs = await client.getBooleanDetails("enable-tabs", true);
 
-        setShowHeader(enableStatsHeader);
-        setShowTabs(enableTabs);
+        setShowHeader(enableStatsHeader.value);
+        setShowTabs(enableTabs.value);
 
         console.log("Feature flags loaded:", { enableStatsHeader, enableTabs });
       } catch (error) {

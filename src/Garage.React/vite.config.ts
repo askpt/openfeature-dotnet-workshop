@@ -6,8 +6,15 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
 
   const goffServiceUrl = SanitizeUrl(
-    process.env.ConnectionStrings__goff || "https://localhost:8080"
+    process.env.ConnectionStrings__goff || "none"
   );
+
+  // Only define GOFF service URL if it's not "none"
+  const defineConfig: any = {};
+  if (goffServiceUrl !== "none") {
+    defineConfig["import.meta.env.VITE_GOFF_SERVICE_URL"] =
+      JSON.stringify(goffServiceUrl);
+  }
 
   return {
     plugins: [react()],
@@ -32,7 +39,7 @@ export default defineConfig(({ mode }) => {
     },
     define: {
       // Expose the GOFF service URL to the client
-      "import.meta.env.VITE_GOFF_SERVICE_URL": JSON.stringify(goffServiceUrl),
+      ...defineConfig,
     },
   };
 });

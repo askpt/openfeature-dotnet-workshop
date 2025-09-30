@@ -19,10 +19,15 @@ var goff = isLocalDevelopment
         .WithGoffBindMount("./goff")
     : null;
 
+var serverKey = builder.AddParameter("devcycle-server-key", secret: true);
+var devcycleUrl = builder.Configuration["DevCycle:Url"] ?? "null";
+
 var apiServiceBuilder = builder.AddProject<Projects.Garage_ApiService>("apiservice")
     .WithReference(database)
     .WaitFor(database)
     .WithReference(cache)
+    .WithEnvironment("DEVCYCLE__URL", devcycleUrl)
+    .WithEnvironment("DEVCYCLE__SERVERKEY", serverKey)
     .WaitFor(cache);
 
 // Only reference goff in development
@@ -49,14 +54,10 @@ webFrontendBuilder
     .WithReference(apiService)
     .WaitFor(apiService)
     .WithEnvironment("BROWSER", "none") // Disable opening browser on npm start
+    .WithEnvironment("DEVCYCLE__URL", devcycleUrl)
+    .WithEnvironment("DEVCYCLE__SERVERKEY", serverKey)
     .WithHttpEndpoint(env: "VITE_PORT")
     .WithExternalHttpEndpoints()
-    .PublishAsDockerFile(containerBuilder =>
-    {
-        // Pass build arguments for Vite build
-        var viteTestEnv = builder.Configuration["ViteTestEnv"] ?? "default";
-        containerBuilder
-            .WithBuildArg("VITE_TEST_ENV", viteTestEnv);
-    });
+    .PublishAsDockerFile();
 
 builder.Build().Run();

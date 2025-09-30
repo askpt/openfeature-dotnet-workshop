@@ -1,10 +1,10 @@
-EnableDatabaseWinners:
+enable-database-winners:
   variations:
     enabled: true
     disabled: false
   defaultRule:
     variation: enabled
-WinnersCount:
+winners-count:
   variations:
     zero: 0
     five: 5
@@ -12,13 +12,13 @@ WinnersCount:
     one-hundred: 100
   defaultRule:
     variation: one-hundred
-EnableStatsHeader:
+enable-stats-header:
   variations:
     enabled: true
     disabled: false
   defaultRule:
     variation: enabled
-EnableTabs:
+enable-tabs:
   variations:
     enabled: true
     disabled: false

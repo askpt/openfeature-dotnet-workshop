@@ -10,12 +10,7 @@ function App() {
   useEffect(() => {
     const initializeFeatureFlags = async () => {
       try {
-        const ofrepServiceUrl =
-          import.meta.env.VITE_GOFF_SERVICE_URL || "https://localhost:8080";
-
-        const test = import.meta.env.VITE_TEST_ENV || "not working";
-
-        console.log(test);
+        const ofrepServiceUrl = import.meta.env.VITE_GOFF_SERVICE_URL || "";
 
         const context: EvaluationContext = {
           targetingKey: "targeting-key",
@@ -29,7 +24,7 @@ function App() {
           })
         );
 
-        console.log("OFREP OpenFeature provider initialized with goff service");
+        console.log("OFREP OpenFeature provider initialized");
       } catch (error) {
         console.warn("Failed to initialize OpenFeature provider:", error);
       } finally {
