@@ -12,8 +12,11 @@ function App() {
       try {
         const ofrepServiceUrl = import.meta.env.VITE_GOFF_SERVICE_URL || "";
 
+        // Get user id from local storage
+        const userId = localStorage.getItem("userId") || "default-user-id";
+
         const context: EvaluationContext = {
-          targetingKey: "targeting-key",
+          targetingKey: userId,
         };
         OpenFeature.setContext(context);
 
