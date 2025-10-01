@@ -12,7 +12,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Garage.ApiService\Garage.ApiService.csproj" />
-    <ProjectReference Include="..\Garage.ServiceDefaults\Garage.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\Garage.ServiceDefaults\Garage.ServiceDefaults.csproj"
+      IsAspireProjectResource="false" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,7 +21,7 @@
     <PackageReference Include="Aspire.Hosting.NodeJs" Version="9.5.0" />
     <PackageReference Include="Aspire.Hosting.Redis" Version="9.5.0" />
     <PackageReference Include="Aspire.Hosting.PostgreSQL" Version="9.5.0" />
-    <PackageReference Include="CommunityToolkit.Aspire.Hosting.GoFeatureFlag" Version="9.7.2" />
+    <PackageReference Include="CommunityToolkit.Aspire.Hosting.GoFeatureFlag" Version="9.8.0" />
   </ItemGroup>
 
   <Target Name="RestoreNpm" BeforeTargets="Build" Condition=" '$(DesignTimeBuild)' != 'true' ">

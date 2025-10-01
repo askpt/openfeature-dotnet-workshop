@@ -12,6 +12,7 @@ using OpenFeature.Hooks;
 using OpenFeature.Model;
 using OpenFeature.Providers.Ofrep;
 using OpenFeature.Providers.Ofrep.Configuration;
+using OpenFeature.Providers.Ofrep.DependencyInjection;
 using OpenTelemetry;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Trace;
@@ -163,16 +164,17 @@ public static class Extensions
                 throw new ArgumentNullException(connectionString);
             }
 
-            var ofrepOptions = new OfrepOptions(connectionString);
             var serverKey = builder.Configuration["DEVCYCLE:SERVERKEY"];
-            if (!string.IsNullOrWhiteSpace(serverKey))
-            {
-                ofrepOptions.Headers.Add("Authorization", serverKey);
-            }
-
             featureBuilder
                 .AddHostedFeatureLifecycle() // From Hosting package
-                .AddProvider(_ => new OfrepProvider(ofrepOptions))
+                .AddOfrepProvider(ofrepOptions =>
+                {
+                    ofrepOptions.BaseUrl = connectionString;
+                    if (!string.IsNullOrWhiteSpace(serverKey))
+                    {
+                        ofrepOptions.Headers.Add("Authorization", serverKey);
+                    }
+                })
                 .AddHook<TraceEnricherHook>()
                 .AddHook<MetricsHook>();
         });
