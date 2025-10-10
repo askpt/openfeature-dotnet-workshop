@@ -1,5 +1,9 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
+// Add Azure Container App Environment for publishing
+var containerAppEnvironment = builder
+    .AddAzureContainerAppEnvironment("cae");
+
 var cache = builder.AddRedis("cache");
 
 var postgres = builder.AddPostgres("postgres");
@@ -28,7 +32,11 @@ var apiServiceBuilder = builder.AddProject<Projects.Garage_ApiService>("apiservi
     .WithReference(cache)
     .WithEnvironment("DEVCYCLE__URL", devcycleUrl)
     .WithEnvironment("DEVCYCLE__SERVERKEY", serverKey)
-    .WaitFor(cache);
+    .WaitFor(cache)
+    .PublishAsAzureContainerApp((infra, app) =>
+    {
+
+    });
 
 // Only reference goff in development
 if (isLocalDevelopment && goff != null)
