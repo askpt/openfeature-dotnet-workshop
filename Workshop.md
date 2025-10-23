@@ -77,6 +77,8 @@ You should see the statistics header toggle on and off based on your feature fla
 - How to integrate OpenFeature into a .NET application
 - Implementing a custom feature flag provider
 
+### Tasks
+
 1. Install OpenFeature Dependencies
 
    ```bash
@@ -123,6 +125,8 @@ see the custom provider in action, and the feature flags should be evaluated bas
 - How to use an external feature flag service
 - Configuring OpenFeature with `flagd`
 - Real-time flag updates without application restarts
+
+### Tasks
 
 1. Install the flagd Provider
 
