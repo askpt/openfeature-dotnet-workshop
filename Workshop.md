@@ -385,9 +385,13 @@ You will have integrated telemetry for feature flags, allowing you to monitor th
 Congratulations! You've completed the OpenFeature .NET workshop. You should now understand:
 
 ✅ Basic feature flag implementation
+
 ✅ Performance tuning with feature flags
+
 ✅ Architectural decisions using flags
+
 ✅ OpenFeature provider integration
+
 ✅ Advanced targeting and evaluation
 
 ### Next Steps
