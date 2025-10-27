@@ -166,7 +166,6 @@ public static class Extensions
 
             var serverKey = builder.Configuration["DEVCYCLE:SERVERKEY"];
             featureBuilder
-                .AddHostedFeatureLifecycle() // From Hosting package
                 .AddOfrepProvider(ofrepOptions =>
                 {
                     ofrepOptions.BaseUrl = connectionString;
