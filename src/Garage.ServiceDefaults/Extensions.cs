@@ -144,7 +144,6 @@ public static class Extensions
         builder.Services.AddOpenFeature(featureBuilder =>
         {
             featureBuilder
-                .AddHostedFeatureLifecycle() // From Hosting package
                 .AddFlagdProvider()
                 .AddHook<TraceEnricherHook>()
                 .AddHook<MetricsHook>();
