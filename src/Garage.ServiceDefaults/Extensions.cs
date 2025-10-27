@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Garage.ServiceDefaults.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
@@ -5,6 +6,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using OpenFeature;
+using OpenFeature.DependencyInjection.Providers.Flagd;
+using OpenFeature.Hooks;
 using OpenTelemetry;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Trace;
@@ -60,6 +64,7 @@ public static class Extensions
             .WithMetrics(metrics =>
             {
                 metrics.AddAspNetCoreInstrumentation()
+                    .AddMeter("OpenFeature")
                     .AddHttpClientInstrumentation()
                     .AddRuntimeInstrumentation();
             })
@@ -135,6 +140,14 @@ public static class Extensions
     {
         // Register the feature flags service
         builder.Services.AddSingleton<IFeatureFlags, FeatureFlags>();
+
+        builder.Services.AddOpenFeature(featureBuilder =>
+        {
+            featureBuilder
+                .AddFlagdProvider()
+                .AddHook<TraceEnricherHook>()
+                .AddHook<MetricsHook>();
+        });
 
         return builder;
     }

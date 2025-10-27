@@ -1,1162 +1,1149 @@
 [
-    {
-        "year": 2025,
-        "manufacturer": "Ferrari",
-        "model": "499P",
-        "engine": "3.0L V6 Twin-Turbo Hybrid",
-        "class": "Hypercar",
-        "drivers": [
-            "Robert Kubica",
-            "Yifei Ye",
-            "Phil Hanson"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2024,
-        "manufacturer": "Ferrari",
-        "model": "499P",
-        "engine": "3.0L V6 Twin-Turbo Hybrid",
-        "class": "Hypercar",
-        "drivers": [
-            "Antonio Fuoco",
-            "Miguel Molina",
-            "Nicklas Nielsen"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2023,
-        "manufacturer": "Ferrari",
-        "model": "499P",
-        "engine": "3.0L V6 Twin-Turbo Hybrid",
-        "class": "Hypercar",
-        "drivers": [
-            "Alessandro Pier Guidi",
-            "James Calado",
-            "Ant\u00f3nio Giovinazzi"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2022,
-        "manufacturer": "Toyota",
-        "model": "GR010 Hybrid",
-        "engine": "3.5L V6 Twin-Turbo Hybrid",
-        "class": "Hypercar",
-        "drivers": [
-            "Brendon Hartley",
-            "S\u00e9bastien Buemi",
-            "Ryo Hirakawa"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2021,
-        "manufacturer": "Toyota",
-        "model": "GR010 Hybrid",
-        "engine": "3.5L V6 Twin-Turbo Hybrid",
-        "class": "Hypercar",
-        "drivers": [
-            "Mike Conway",
-            "Kamui Kobayashi",
-            "Jos\u00e9 Mar\u00eda L\u00f3pez"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2020,
-        "manufacturer": "Toyota",
-        "model": "TS050 Hybrid",
-        "engine": "2.4L V6 Twin-Turbo Hybrid",
-        "class": "LMP1",
-        "drivers": [
-            "S\u00e9bastien Buemi",
-            "Kazuki Nakajima",
-            "Brendon Hartley"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2019,
-        "manufacturer": "Toyota",
-        "model": "TS050 Hybrid",
-        "engine": "2.4L V6 Twin-Turbo Hybrid",
-        "class": "LMP1",
-        "drivers": [
-            "Mike Conway",
-            "Kamui Kobayashi",
-            "Jos\u00e9 Mar\u00eda L\u00f3pez"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2018,
-        "manufacturer": "Toyota",
-        "model": "TS050 Hybrid",
-        "engine": "2.4L V6 Twin-Turbo Hybrid",
-        "class": "LMP1",
-        "drivers": [
-            "S\u00e9bastien Buemi",
-            "Kazuki Nakajima",
-            "Fernando Alonso"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2017,
-        "manufacturer": "Porsche",
-        "model": "919 Hybrid",
-        "engine": "2.0L V4 Turbo Hybrid",
-        "class": "LMP1",
-        "drivers": [
-            "Earl Bamber",
-            "Timo Bernhard",
-            "Brendon Hartley"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2016,
-        "manufacturer": "Porsche",
-        "model": "919 Hybrid",
-        "engine": "2.0L V4 Turbo Hybrid",
-        "class": "LMP1",
-        "drivers": [
-            "Romain Dumas",
-            "Neel Jani",
-            "Marc Lieb"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2015,
-        "manufacturer": "Porsche",
-        "model": "919 Hybrid",
-        "engine": "2.0L V4 Turbo Hybrid",
-        "class": "LMP1",
-        "drivers": [
-            "Nico H\u00fclkenberg",
-            "Nick Tandy",
-            "Earl Bamber"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2014,
-        "manufacturer": "Audi",
-        "model": "R18 e-tron quattro",
-        "engine": "3.7L V6 TDI Hybrid",
-        "class": "LMP1",
-        "drivers": [
-            "Marcel F\u00e4ssler",
-            "Andr\u00e9 Lotterer",
-            "Benoit Tr\u00e9luyer"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2013,
-        "manufacturer": "Audi",
-        "model": "R18 e-tron quattro",
-        "engine": "3.7L V6 TDI Hybrid",
-        "class": "LMP1",
-        "drivers": [
-            "Lo\u00efc Duval",
-            "Tom Kristensen",
-            "Allan McNish"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2012,
-        "manufacturer": "Audi",
-        "model": "R18 e-tron quattro",
-        "engine": "3.7L V6 TDI Hybrid",
-        "class": "LMP1",
-        "drivers": [
-            "Andr\u00e9 Lotterer",
-            "Benoit Tr\u00e9luyer",
-            "Marcel F\u00e4ssler"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2011,
-        "manufacturer": "Audi",
-        "model": "R18 TDI",
-        "engine": "3.7L V6 TDI",
-        "class": "LMP1",
-        "drivers": [
-            "Andr\u00e9 Lotterer",
-            "Benoit Tr\u00e9luyer",
-            "Marcel F\u00e4ssler"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2010,
-        "manufacturer": "Audi",
-        "model": "R15 TDI",
-        "engine": "5.5L V10 TDI",
-        "class": "LMP1",
-        "drivers": [
-            "Timo Bernhard",
-            "Romain Dumas",
-            "Mike Rockenfeller"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2009,
-        "manufacturer": "Audi",
-        "model": "R15 TDI",
-        "engine": "5.5L V10 TDI",
-        "class": "LMP1",
-        "drivers": [
-            "Rinaldo Capello",
-            "Tom Kristensen",
-            "Allan McNish"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2008,
-        "manufacturer": "Audi",
-        "model": "R10 TDI",
-        "engine": "5.5L V12 TDI",
-        "class": "LMP1",
-        "drivers": [
-            "Rinaldo Capello",
-            "Tom Kristensen",
-            "Allan McNish"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2007,
-        "manufacturer": "Audi",
-        "model": "R10 TDI",
-        "engine": "5.5L V12 TDI",
-        "class": "LMP1",
-        "drivers": [
-            "Frank Biela",
-            "Emanuele Pirro",
-            "Marco Werner"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2006,
-        "manufacturer": "Audi",
-        "model": "R10 TDI",
-        "engine": "5.5L V12 TDI",
-        "class": "LMP1",
-        "drivers": [
-            "Frank Biela",
-            "Emanuele Pirro",
-            "Marco Werner"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2005,
-        "manufacturer": "Audi",
-        "model": "R8",
-        "engine": "3.6L V8 FSI",
-        "class": "LMP1",
-        "drivers": [
-            "Frank Biela",
-            "Emanuele Pirro",
-            "Marco Werner"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2004,
-        "manufacturer": "Audi",
-        "model": "R8",
-        "engine": "3.6L V8 FSI",
-        "class": "LMP1",
-        "drivers": [
-            "Rinaldo Capello",
-            "Tom Kristensen",
-            "Seiji Ara"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2003,
-        "manufacturer": "Bentley",
-        "model": "Speed 8",
-        "engine": "4.0L V8 Twin-Turbo",
-        "class": "LMP1",
-        "drivers": [
-            "Tom Kristensen",
-            "Rinaldo Capello",
-            "Guy Smith"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2002,
-        "manufacturer": "Audi",
-        "model": "R8",
-        "engine": "3.6L V8 FSI",
-        "class": "LMP1",
-        "drivers": [
-            "Frank Biela",
-            "Tom Kristensen",
-            "Emanuele Pirro"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2001,
-        "manufacturer": "Audi",
-        "model": "R8",
-        "engine": "3.6L V8 FSI",
-        "class": "LMP1",
-        "drivers": [
-            "Frank Biela",
-            "Tom Kristensen",
-            "Emanuele Pirro"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 2000,
-        "manufacturer": "Audi",
-        "model": "R8",
-        "engine": "3.6L V8 FSI",
-        "class": "LMP1",
-        "drivers": [
-            "Frank Biela",
-            "Tom Kristensen",
-            "Emanuele Pirro"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1999,
-        "manufacturer": "BMW",
-        "model": "V12 LMR",
-        "engine": "6.0L V12",
-        "class": "LMP1",
-        "drivers": [
-            "Joachim Winkelhock",
-            "Pierluigi Martini",
-            "Yannick Dalmas"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1998,
-        "manufacturer": "Porsche",
-        "model": "911 GT1-98",
-        "engine": "3.2L Flat-6 Twin-Turbo",
-        "class": "GT1",
-        "drivers": [
-            "Allan McNish",
-            "Laurent A\u00efello",
-            "St\u00e9phane Ortelli"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1997,
-        "manufacturer": "Porsche",
-        "model": "911 GT1",
-        "engine": "3.2L Flat-6 Twin-Turbo",
-        "class": "GT1",
-        "drivers": [
-            "Joerg M\u00fcller",
-            "Tom Kristensen",
-            "Michele Alboreto"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1996,
-        "manufacturer": "Porsche",
-        "model": "911 GT1",
-        "engine": "3.2L Flat-6 Twin-Turbo",
-        "class": "GT1",
-        "drivers": [
-            "Davy Jones",
-            "Manuel Reuter",
-            "Alexander Wurz"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1995,
-        "manufacturer": "McLaren",
-        "model": "F1 GTR",
-        "engine": "6.1L V12",
-        "class": "GT1",
-        "drivers": [
-            "Yannick Dalmas",
-            "Masanori Sekiya",
-            "Volker Weidler"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1994,
-        "manufacturer": "Porsche",
-        "model": "962C",
-        "engine": "3.2L Flat-6 Twin-Turbo",
-        "class": "Group C",
-        "drivers": [
-            "Yannick Dalmas",
-            "Mauro Baldi",
-            "Hurley Haywood"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1993,
-        "manufacturer": "Peugeot",
-        "model": "905 Evo 1 Bis",
-        "engine": "3.5L V10",
-        "class": "Group C",
-        "drivers": [
-            "Geoff Brabham",
-            "Christophe Bouchut",
-            "Eric H\u00e9lary"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1992,
-        "manufacturer": "Peugeot",
-        "model": "905B",
-        "engine": "3.5L V10",
-        "class": "Group C",
-        "drivers": [
-            "Derek Warwick",
-            "Yannick Dalmas",
-            "Mark Blundell"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1991,
-        "manufacturer": "Mazda",
-        "model": "787B",
-        "engine": "2.6L 4-Rotor",
-        "class": "Group C",
-        "drivers": [
-            "Volker Weidler",
-            "Johnny Herbert",
-            "Bertrand Gachot"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1990,
-        "manufacturer": "Jaguar",
-        "model": "XJR-12",
-        "engine": "7.4L V12",
-        "class": "Group C",
-        "drivers": [
-            "John Nielsen",
-            "Price Cobb",
-            "Martin Brundle"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1989,
-        "manufacturer": "Mercedes-Benz",
-        "model": "C9",
-        "engine": "5.0L V8 Twin-Turbo",
-        "class": "Group C",
-        "drivers": [
-            "Jochen Mass",
-            "Manuel Reuter",
-            "Stanley Dickens"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1988,
-        "manufacturer": "Jaguar",
-        "model": "XJR-9",
-        "engine": "7.0L V12",
-        "class": "Group C",
-        "drivers": [
-            "Jan Lammers",
-            "Johnny Dumfries",
-            "Andy Wallace"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1987,
-        "manufacturer": "Porsche",
-        "model": "962C",
-        "engine": "2.6L Flat-6 Twin-Turbo",
-        "class": "Group C",
-        "drivers": [
-            "Derek Bell",
-            "Hans-Joachim Stuck",
-            "Al Holbert"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1986,
-        "manufacturer": "Porsche",
-        "model": "962C",
-        "engine": "2.6L Flat-6 Twin-Turbo",
-        "class": "Group C",
-        "drivers": [
-            "Derek Bell",
-            "Hans-Joachim Stuck",
-            "Al Holbert"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1985,
-        "manufacturer": "Porsche",
-        "model": "962C",
-        "engine": "2.6L Flat-6 Twin-Turbo",
-        "class": "Group C",
-        "drivers": [
-            "Klaus Ludwig",
-            "Paolo Barilla",
-            "John Winter"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1984,
-        "manufacturer": "Porsche",
-        "model": "956",
-        "engine": "2.6L Flat-6 Twin-Turbo",
-        "class": "Group C",
-        "drivers": [
-            "Henri Pescarolo",
-            "Klaus Ludwig"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1983,
-        "manufacturer": "Porsche",
-        "model": "956",
-        "engine": "2.6L Flat-6 Twin-Turbo",
-        "class": "Group C",
-        "drivers": [
-            "Vern Schuppan",
-            "Hurley Haywood",
-            "Al Holbert"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1982,
-        "manufacturer": "Porsche",
-        "model": "956",
-        "engine": "2.6L Flat-6 Twin-Turbo",
-        "class": "Group C",
-        "drivers": [
-            "Derek Bell",
-            "Jacky Ickx"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1981,
-        "manufacturer": "Porsche",
-        "model": "936/81",
-        "engine": "2.6L Flat-6 Twin-Turbo",
-        "class": "Group C",
-        "drivers": [
-            "Derek Bell",
-            "Jacky Ickx"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1980,
-        "manufacturer": "Rondeau",
-        "model": "M379B",
-        "engine": "2.9L V6",
-        "class": "Group 6",
-        "drivers": [
-            "Jean Rondeau",
-            "Jean-Pierre Jaussaud"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1979,
-        "manufacturer": "Porsche",
-        "model": "935 K3",
-        "engine": "3.2L Flat-6 Twin-Turbo",
-        "class": "Group 5",
-        "drivers": [
-            "Klaus Ludwig",
-            "Bill Whittington",
-            "Don Whittington"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1978,
-        "manufacturer": "Renault",
-        "model": "A442B",
-        "engine": "2.0L V6 Turbo",
-        "class": "Group 6",
-        "drivers": [
-            "Jean-Pierre Jaussaud",
-            "Didier Pironi"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1977,
-        "manufacturer": "Porsche",
-        "model": "936",
-        "engine": "2.1L Flat-6 Turbo",
-        "class": "Group 6",
-        "drivers": [
-            "Jacky Ickx",
-            "J\u00fcrgen Barth",
-            "Hurley Haywood"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1976,
-        "manufacturer": "Porsche",
-        "model": "936",
-        "engine": "2.1L Flat-6 Turbo",
-        "class": "Group 6",
-        "drivers": [
-            "Jacky Ickx",
-            "Gijs van Lennep"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1975,
-        "manufacturer": "Gulf",
-        "model": "Mirage GR8",
-        "engine": "3.3L V8",
-        "class": "Group 6",
-        "drivers": [
-            "Derek Bell",
-            "Jacky Ickx"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1974,
-        "manufacturer": "Matra",
-        "model": "MS670C",
-        "engine": "3.0L V12",
-        "class": "Group 6",
-        "drivers": [
-            "Henri Pescarolo",
-            "G\u00e9rard Larrousse"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1973,
-        "manufacturer": "Matra",
-        "model": "MS670B",
-        "engine": "3.0L V12",
-        "class": "Group 6",
-        "drivers": [
-            "Henri Pescarolo",
-            "G\u00e9rard Larrousse"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1972,
-        "manufacturer": "Matra",
-        "model": "MS670",
-        "engine": "3.0L V12",
-        "class": "Group 6",
-        "drivers": [
-            "Henri Pescarolo",
-            "Graham Hill"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1971,
-        "manufacturer": "Porsche",
-        "model": "917K",
-        "engine": "4.9L Flat-12",
-        "class": "Group 5",
-        "drivers": [
-            "Helmut Marko",
-            "Gijs van Lennep"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1970,
-        "manufacturer": "Porsche",
-        "model": "917K",
-        "engine": "4.5L Flat-12",
-        "class": "Group 5",
-        "drivers": [
-            "Hans Herrmann",
-            "Richard Attwood"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1969,
-        "manufacturer": "Ford",
-        "model": "GT40",
-        "engine": "4.9L V8",
-        "class": "Group 4",
-        "drivers": [
-            "Jacky Ickx",
-            "Jackie Oliver"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1968,
-        "manufacturer": "Ford",
-        "model": "GT40",
-        "engine": "4.9L V8",
-        "class": "Group 4",
-        "drivers": [
-            "Pedro Rodr\u00edguez",
-            "Lucien Bianchi"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1967,
-        "manufacturer": "Ford",
-        "model": "GT40 Mk IV",
-        "engine": "7.0L V8",
-        "class": "Group 4",
-        "drivers": [
-            "Dan Gurney",
-            "A. J. Foyt"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1966,
-        "manufacturer": "Ford",
-        "model": "GT40 Mk II",
-        "engine": "7.0L V8",
-        "class": "Group 4",
-        "drivers": [
-            "Bruce McLaren",
-            "Chris Amon"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1965,
-        "manufacturer": "Ferrari",
-        "model": "250LM",
-        "engine": "3.3L V12",
-        "class": "Group 4",
-        "drivers": [
-            "Jochen Rindt",
-            "Masten Gregory"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1964,
-        "manufacturer": "Ferrari",
-        "model": "275P",
-        "engine": "3.3L V12",
-        "class": "Group 6",
-        "drivers": [
-            "Jean Guichet",
-            "Nino Vaccarella"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1963,
-        "manufacturer": "Ferrari",
-        "model": "250P",
-        "engine": "3.0L V12",
-        "class": "Group 6",
-        "drivers": [
-            "Lorenzo Bandini",
-            "Ludovico Scarfiotti"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1962,
-        "manufacturer": "Ferrari",
-        "model": "330TRI/LM",
-        "engine": "4.0L V12",
-        "class": "Group 6",
-        "drivers": [
-            "Oliver Gendebien",
-            "Phil Hill"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1961,
-        "manufacturer": "Ferrari",
-        "model": "250TRI",
-        "engine": "3.0L V12",
-        "class": "Group 6",
-        "drivers": [
-            "Oliver Gendebien",
-            "Phil Hill"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1960,
-        "manufacturer": "Ferrari",
-        "model": "250TR",
-        "engine": "3.0L V12",
-        "class": "Group 6",
-        "drivers": [
-            "Oliver Gendebien",
-            "Paul Fr\u00e8re"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1959,
-        "manufacturer": "Aston Martin",
-        "model": "DBR1",
-        "engine": "3.0L Inline-6",
-        "class": "Group 6",
-        "drivers": [
-            "Roy Salvadori",
-            "Carroll Shelby"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1958,
-        "manufacturer": "Ferrari",
-        "model": "250TR",
-        "engine": "3.0L V12",
-        "class": "Group 6",
-        "drivers": [
-            "Oliver Gendebien",
-            "Phil Hill"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1957,
-        "manufacturer": "Jaguar",
-        "model": "D-Type",
-        "engine": "3.4L Inline-6",
-        "class": "Group 6",
-        "drivers": [
-            "Ron Flockhart",
-            "Ivor Bueb"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1956,
-        "manufacturer": "Jaguar",
-        "model": "D-Type",
-        "engine": "3.4L Inline-6",
-        "class": "Group 6",
-        "drivers": [
-            "Ron Flockhart",
-            "Ninian Sanderson"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1955,
-        "manufacturer": "Jaguar",
-        "model": "D-Type",
-        "engine": "3.4L Inline-6",
-        "class": "Group 6",
-        "drivers": [
-            "Mike Hawthorn",
-            "Ivor Bueb"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1954,
-        "manufacturer": "Ferrari",
-        "model": "375 Plus",
-        "engine": "4.9L V12",
-        "class": "Group 6",
-        "drivers": [
-            "Jos\u00e9 Froil\u00e1n Gonz\u00e1lez",
-            "Maurice Trintignant"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1953,
-        "manufacturer": "Jaguar",
-        "model": "C-Type",
-        "engine": "3.4L Inline-6",
-        "class": "Group 6",
-        "drivers": [
-            "Tony Rolt",
-            "Duncan Hamilton"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1952,
-        "manufacturer": "Mercedes-Benz",
-        "model": "300SL",
-        "engine": "3.0L Inline-6",
-        "class": "Group 6",
-        "drivers": [
-            "Hermann Lang",
-            "Fritz Riess"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1951,
-        "manufacturer": "Jaguar",
-        "model": "C-Type",
-        "engine": "3.4L Inline-6",
-        "class": "Group 6",
-        "drivers": [
-            "Peter Walker",
-            "Peter Whitehead"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1950,
-        "manufacturer": "Talbot-Lago",
-        "model": "T26C",
-        "engine": "4.5L Inline-6",
-        "class": "Group 6",
-        "drivers": [
-            "Louis Rosier",
-            "Jean-Louis Rosier"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1949,
-        "manufacturer": "Ferrari",
-        "model": "166MM",
-        "engine": "2.0L V12",
-        "class": "Group 6",
-        "drivers": [
-            "Luigi Chinetti",
-            "Lord Selsdon"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1939,
-        "manufacturer": "Bugatti",
-        "model": "Type 57C Tank",
-        "engine": "3.3L Inline-8",
-        "class": "Group 6",
-        "drivers": [
-            "Jean-Pierre Wimille",
-            "Pierre Veyron"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1938,
-        "manufacturer": "Delahaye",
-        "model": "145",
-        "engine": "4.5L V12",
-        "class": "Group 6",
-        "drivers": [
-            "Eug\u00e8ne Chaboud",
-            "Jean Tremoulet"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1937,
-        "manufacturer": "Bugatti",
-        "model": "Type 57G Tank",
-        "engine": "3.3L Inline-8",
-        "class": "Group 6",
-        "drivers": [
-            "Jean-Pierre Wimille",
-            "Robert Benoist"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1935,
-        "manufacturer": "Lagonda",
-        "model": "M45R",
-        "engine": "4.5L Inline-6",
-        "class": "Group 6",
-        "drivers": [
-            "John Hindmarsh",
-            "Luis Fontes"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1934,
-        "manufacturer": "Alfa Romeo",
-        "model": "8C 2300",
-        "engine": "2.3L Inline-8",
-        "class": "Group 6",
-        "drivers": [
-            "Luigi Chinetti",
-            "Philippe \u00c9tancelin"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1933,
-        "manufacturer": "Alfa Romeo",
-        "model": "8C 2300",
-        "engine": "2.3L Inline-8",
-        "class": "Group 6",
-        "drivers": [
-            "Raymond Sommer",
-            "Tazio Nuvolari"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1932,
-        "manufacturer": "Alfa Romeo",
-        "model": "8C 2300",
-        "engine": "2.3L Inline-8",
-        "class": "Group 6",
-        "drivers": [
-            "Raymond Sommer",
-            "Luigi Chinetti"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1931,
-        "manufacturer": "Alfa Romeo",
-        "model": "8C 2300",
-        "engine": "2.3L Inline-8",
-        "class": "Group 6",
-        "drivers": [
-            "Earl Howe",
-            "Henry Birkin"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1930,
-        "manufacturer": "Bentley",
-        "model": "Speed Six",
-        "engine": "6.6L Inline-6",
-        "class": "Group 6",
-        "drivers": [
-            "Woolf Barnato",
-            "Glen Kidston"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1929,
-        "manufacturer": "Bentley",
-        "model": "Speed Six",
-        "engine": "6.6L Inline-6",
-        "class": "Group 6",
-        "drivers": [
-            "Woolf Barnato",
-            "Henry Birkin"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1928,
-        "manufacturer": "Bentley",
-        "model": "4\u00bd Litre",
-        "engine": "4.4L Inline-4",
-        "class": "Group 6",
-        "drivers": [
-            "Woolf Barnato",
-            "Bernard Rubin"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1927,
-        "manufacturer": "Bentley",
-        "model": "3 Litre",
-        "engine": "3.0L Inline-4",
-        "class": "Group 6",
-        "drivers": [
-            "J. Dudley Benjafield",
-            "Sammy Davis"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1926,
-        "manufacturer": "Lorraine-Dietrich",
-        "model": "B3-6",
-        "engine": "3.4L Inline-6",
-        "class": "Group 6",
-        "drivers": [
-            "Robert Bloch",
-            "Andr\u00e9 Rossignol"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1925,
-        "manufacturer": "Lorraine-Dietrich",
-        "model": "B3-6",
-        "engine": "3.4L Inline-6",
-        "class": "Group 6",
-        "drivers": [
-            "G\u00e9rard de Courcelles",
-            "Andr\u00e9 Rossignol"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1924,
-        "manufacturer": "Bentley",
-        "model": "3 Litre",
-        "engine": "3.0L Inline-4",
-        "class": "Group 6",
-        "drivers": [
-            "John Duff",
-            "Frank Clement"
-        ],
-        "isOwned": false
-    },
-    {
-        "year": 1923,
-        "manufacturer": "Chenard & Walcker",
-        "model": "Sport",
-        "engine": "3.0L Inline-4",
-        "class": "Group 6",
-        "drivers": [
-            "Andr\u00e9 Lagache",
-            "Ren\u00e9 L\u00e9onard"
-        ],
-        "isOwned": false
-    }
+  {
+    "year": 2025,
+    "manufacturer": "Ferrari",
+    "model": "499P",
+    "engine": "3.0L V6 Twin-Turbo Hybrid",
+    "class": "Hypercar",
+    "drivers": [
+      "Robert Kubica",
+      "Yifei Ye",
+      "Phil Hanson"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2023,
+    "manufacturer": "Ferrari",
+    "model": "499P",
+    "engine": "3.0L V6 Twin-Turbo Hybrid",
+    "class": "Hypercar",
+    "drivers": [
+      "Alessandro Pier Guidi",
+      "James Calado",
+      "Ant\u00f3nio Giovinazzi"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2022,
+    "manufacturer": "Toyota",
+    "model": "GR010 Hybrid",
+    "engine": "3.5L V6 Twin-Turbo Hybrid",
+    "class": "Hypercar",
+    "drivers": [
+      "Brendon Hartley",
+      "S\u00e9bastien Buemi",
+      "Ryo Hirakawa"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2021,
+    "manufacturer": "Toyota",
+    "model": "GR010 Hybrid",
+    "engine": "3.5L V6 Twin-Turbo Hybrid",
+    "class": "Hypercar",
+    "drivers": [
+      "Mike Conway",
+      "Kamui Kobayashi",
+      "Jos\u00e9 Mar\u00eda L\u00f3pez"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2020,
+    "manufacturer": "Toyota",
+    "model": "TS050 Hybrid",
+    "engine": "2.4L V6 Twin-Turbo Hybrid",
+    "class": "LMP1",
+    "drivers": [
+      "S\u00e9bastien Buemi",
+      "Kazuki Nakajima",
+      "Brendon Hartley"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2019,
+    "manufacturer": "Toyota",
+    "model": "TS050 Hybrid",
+    "engine": "2.4L V6 Twin-Turbo Hybrid",
+    "class": "LMP1",
+    "drivers": [
+      "Mike Conway",
+      "Kamui Kobayashi",
+      "Jos\u00e9 Mar\u00eda L\u00f3pez"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2018,
+    "manufacturer": "Toyota",
+    "model": "TS050 Hybrid",
+    "engine": "2.4L V6 Twin-Turbo Hybrid",
+    "class": "LMP1",
+    "drivers": [
+      "S\u00e9bastien Buemi",
+      "Kazuki Nakajima",
+      "Fernando Alonso"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2017,
+    "manufacturer": "Porsche",
+    "model": "919 Hybrid",
+    "engine": "2.0L V4 Turbo Hybrid",
+    "class": "LMP1",
+    "drivers": [
+      "Earl Bamber",
+      "Timo Bernhard",
+      "Brendon Hartley"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2016,
+    "manufacturer": "Porsche",
+    "model": "919 Hybrid",
+    "engine": "2.0L V4 Turbo Hybrid",
+    "class": "LMP1",
+    "drivers": [
+      "Romain Dumas",
+      "Neel Jani",
+      "Marc Lieb"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2015,
+    "manufacturer": "Porsche",
+    "model": "919 Hybrid",
+    "engine": "2.0L V4 Turbo Hybrid",
+    "class": "LMP1",
+    "drivers": [
+      "Nico H\u00fclkenberg",
+      "Nick Tandy",
+      "Earl Bamber"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2014,
+    "manufacturer": "Audi",
+    "model": "R18 e-tron quattro",
+    "engine": "3.7L V6 TDI Hybrid",
+    "class": "LMP1",
+    "drivers": [
+      "Marcel F\u00e4ssler",
+      "Andr\u00e9 Lotterer",
+      "Benoit Tr\u00e9luyer"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2013,
+    "manufacturer": "Audi",
+    "model": "R18 e-tron quattro",
+    "engine": "3.7L V6 TDI Hybrid",
+    "class": "LMP1",
+    "drivers": [
+      "Lo\u00efc Duval",
+      "Tom Kristensen",
+      "Allan McNish"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2012,
+    "manufacturer": "Audi",
+    "model": "R18 e-tron quattro",
+    "engine": "3.7L V6 TDI Hybrid",
+    "class": "LMP1",
+    "drivers": [
+      "Andr\u00e9 Lotterer",
+      "Benoit Tr\u00e9luyer",
+      "Marcel F\u00e4ssler"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2011,
+    "manufacturer": "Audi",
+    "model": "R18 TDI",
+    "engine": "3.7L V6 TDI",
+    "class": "LMP1",
+    "drivers": [
+      "Andr\u00e9 Lotterer",
+      "Benoit Tr\u00e9luyer",
+      "Marcel F\u00e4ssler"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2010,
+    "manufacturer": "Audi",
+    "model": "R15 TDI",
+    "engine": "5.5L V10 TDI",
+    "class": "LMP1",
+    "drivers": [
+      "Timo Bernhard",
+      "Romain Dumas",
+      "Mike Rockenfeller"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2009,
+    "manufacturer": "Audi",
+    "model": "R15 TDI",
+    "engine": "5.5L V10 TDI",
+    "class": "LMP1",
+    "drivers": [
+      "Rinaldo Capello",
+      "Tom Kristensen",
+      "Allan McNish"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2008,
+    "manufacturer": "Audi",
+    "model": "R10 TDI",
+    "engine": "5.5L V12 TDI",
+    "class": "LMP1",
+    "drivers": [
+      "Rinaldo Capello",
+      "Tom Kristensen",
+      "Allan McNish"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2007,
+    "manufacturer": "Audi",
+    "model": "R10 TDI",
+    "engine": "5.5L V12 TDI",
+    "class": "LMP1",
+    "drivers": [
+      "Frank Biela",
+      "Emanuele Pirro",
+      "Marco Werner"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2006,
+    "manufacturer": "Audi",
+    "model": "R10 TDI",
+    "engine": "5.5L V12 TDI",
+    "class": "LMP1",
+    "drivers": [
+      "Frank Biela",
+      "Emanuele Pirro",
+      "Marco Werner"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2005,
+    "manufacturer": "Audi",
+    "model": "R8",
+    "engine": "3.6L V8 FSI",
+    "class": "LMP1",
+    "drivers": [
+      "Frank Biela",
+      "Emanuele Pirro",
+      "Marco Werner"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2004,
+    "manufacturer": "Audi",
+    "model": "R8",
+    "engine": "3.6L V8 FSI",
+    "class": "LMP1",
+    "drivers": [
+      "Rinaldo Capello",
+      "Tom Kristensen",
+      "Seiji Ara"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2003,
+    "manufacturer": "Bentley",
+    "model": "Speed 8",
+    "engine": "4.0L V8 Twin-Turbo",
+    "class": "LMP1",
+    "drivers": [
+      "Tom Kristensen",
+      "Rinaldo Capello",
+      "Guy Smith"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2002,
+    "manufacturer": "Audi",
+    "model": "R8",
+    "engine": "3.6L V8 FSI",
+    "class": "LMP1",
+    "drivers": [
+      "Frank Biela",
+      "Tom Kristensen",
+      "Emanuele Pirro"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2001,
+    "manufacturer": "Audi",
+    "model": "R8",
+    "engine": "3.6L V8 FSI",
+    "class": "LMP1",
+    "drivers": [
+      "Frank Biela",
+      "Tom Kristensen",
+      "Emanuele Pirro"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 2000,
+    "manufacturer": "Audi",
+    "model": "R8",
+    "engine": "3.6L V8 FSI",
+    "class": "LMP1",
+    "drivers": [
+      "Frank Biela",
+      "Tom Kristensen",
+      "Emanuele Pirro"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1999,
+    "manufacturer": "BMW",
+    "model": "V12 LMR",
+    "engine": "6.0L V12",
+    "class": "LMP1",
+    "drivers": [
+      "Joachim Winkelhock",
+      "Pierluigi Martini",
+      "Yannick Dalmas"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1998,
+    "manufacturer": "Porsche",
+    "model": "911 GT1-98",
+    "engine": "3.2L Flat-6 Twin-Turbo",
+    "class": "GT1",
+    "drivers": [
+      "Allan McNish",
+      "Laurent A\u00efello",
+      "St\u00e9phane Ortelli"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1997,
+    "manufacturer": "Porsche",
+    "model": "911 GT1",
+    "engine": "3.2L Flat-6 Twin-Turbo",
+    "class": "GT1",
+    "drivers": [
+      "Joerg M\u00fcller",
+      "Tom Kristensen",
+      "Michele Alboreto"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1996,
+    "manufacturer": "Porsche",
+    "model": "911 GT1",
+    "engine": "3.2L Flat-6 Twin-Turbo",
+    "class": "GT1",
+    "drivers": [
+      "Davy Jones",
+      "Manuel Reuter",
+      "Alexander Wurz"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1995,
+    "manufacturer": "McLaren",
+    "model": "F1 GTR",
+    "engine": "6.1L V12",
+    "class": "GT1",
+    "drivers": [
+      "Yannick Dalmas",
+      "Masanori Sekiya",
+      "Volker Weidler"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1994,
+    "manufacturer": "Porsche",
+    "model": "962C",
+    "engine": "3.2L Flat-6 Twin-Turbo",
+    "class": "Group C",
+    "drivers": [
+      "Yannick Dalmas",
+      "Mauro Baldi",
+      "Hurley Haywood"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1993,
+    "manufacturer": "Peugeot",
+    "model": "905 Evo 1 Bis",
+    "engine": "3.5L V10",
+    "class": "Group C",
+    "drivers": [
+      "Geoff Brabham",
+      "Christophe Bouchut",
+      "Eric H\u00e9lary"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1992,
+    "manufacturer": "Peugeot",
+    "model": "905B",
+    "engine": "3.5L V10",
+    "class": "Group C",
+    "drivers": [
+      "Derek Warwick",
+      "Yannick Dalmas",
+      "Mark Blundell"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1991,
+    "manufacturer": "Mazda",
+    "model": "787B",
+    "engine": "2.6L 4-Rotor",
+    "class": "Group C",
+    "drivers": [
+      "Volker Weidler",
+      "Johnny Herbert",
+      "Bertrand Gachot"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1990,
+    "manufacturer": "Jaguar",
+    "model": "XJR-12",
+    "engine": "7.4L V12",
+    "class": "Group C",
+    "drivers": [
+      "John Nielsen",
+      "Price Cobb",
+      "Martin Brundle"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1989,
+    "manufacturer": "Mercedes-Benz",
+    "model": "C9",
+    "engine": "5.0L V8 Twin-Turbo",
+    "class": "Group C",
+    "drivers": [
+      "Jochen Mass",
+      "Manuel Reuter",
+      "Stanley Dickens"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1988,
+    "manufacturer": "Jaguar",
+    "model": "XJR-9",
+    "engine": "7.0L V12",
+    "class": "Group C",
+    "drivers": [
+      "Jan Lammers",
+      "Johnny Dumfries",
+      "Andy Wallace"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1987,
+    "manufacturer": "Porsche",
+    "model": "962C",
+    "engine": "2.6L Flat-6 Twin-Turbo",
+    "class": "Group C",
+    "drivers": [
+      "Derek Bell",
+      "Hans-Joachim Stuck",
+      "Al Holbert"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1986,
+    "manufacturer": "Porsche",
+    "model": "962C",
+    "engine": "2.6L Flat-6 Twin-Turbo",
+    "class": "Group C",
+    "drivers": [
+      "Derek Bell",
+      "Hans-Joachim Stuck",
+      "Al Holbert"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1985,
+    "manufacturer": "Porsche",
+    "model": "962C",
+    "engine": "2.6L Flat-6 Twin-Turbo",
+    "class": "Group C",
+    "drivers": [
+      "Klaus Ludwig",
+      "Paolo Barilla",
+      "John Winter"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1984,
+    "manufacturer": "Porsche",
+    "model": "956",
+    "engine": "2.6L Flat-6 Twin-Turbo",
+    "class": "Group C",
+    "drivers": [
+      "Henri Pescarolo",
+      "Klaus Ludwig"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1983,
+    "manufacturer": "Porsche",
+    "model": "956",
+    "engine": "2.6L Flat-6 Twin-Turbo",
+    "class": "Group C",
+    "drivers": [
+      "Vern Schuppan",
+      "Hurley Haywood",
+      "Al Holbert"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1982,
+    "manufacturer": "Porsche",
+    "model": "956",
+    "engine": "2.6L Flat-6 Twin-Turbo",
+    "class": "Group C",
+    "drivers": [
+      "Derek Bell",
+      "Jacky Ickx"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1981,
+    "manufacturer": "Porsche",
+    "model": "936/81",
+    "engine": "2.6L Flat-6 Twin-Turbo",
+    "class": "Group C",
+    "drivers": [
+      "Derek Bell",
+      "Jacky Ickx"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1980,
+    "manufacturer": "Rondeau",
+    "model": "M379B",
+    "engine": "2.9L V6",
+    "class": "Group 6",
+    "drivers": [
+      "Jean Rondeau",
+      "Jean-Pierre Jaussaud"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1979,
+    "manufacturer": "Porsche",
+    "model": "935 K3",
+    "engine": "3.2L Flat-6 Twin-Turbo",
+    "class": "Group 5",
+    "drivers": [
+      "Klaus Ludwig",
+      "Bill Whittington",
+      "Don Whittington"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1978,
+    "manufacturer": "Renault",
+    "model": "A442B",
+    "engine": "2.0L V6 Turbo",
+    "class": "Group 6",
+    "drivers": [
+      "Jean-Pierre Jaussaud",
+      "Didier Pironi"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1977,
+    "manufacturer": "Porsche",
+    "model": "936",
+    "engine": "2.1L Flat-6 Turbo",
+    "class": "Group 6",
+    "drivers": [
+      "Jacky Ickx",
+      "J\u00fcrgen Barth",
+      "Hurley Haywood"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1976,
+    "manufacturer": "Porsche",
+    "model": "936",
+    "engine": "2.1L Flat-6 Turbo",
+    "class": "Group 6",
+    "drivers": [
+      "Jacky Ickx",
+      "Gijs van Lennep"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1975,
+    "manufacturer": "Gulf",
+    "model": "Mirage GR8",
+    "engine": "3.3L V8",
+    "class": "Group 6",
+    "drivers": [
+      "Derek Bell",
+      "Jacky Ickx"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1974,
+    "manufacturer": "Matra",
+    "model": "MS670C",
+    "engine": "3.0L V12",
+    "class": "Group 6",
+    "drivers": [
+      "Henri Pescarolo",
+      "G\u00e9rard Larrousse"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1973,
+    "manufacturer": "Matra",
+    "model": "MS670B",
+    "engine": "3.0L V12",
+    "class": "Group 6",
+    "drivers": [
+      "Henri Pescarolo",
+      "G\u00e9rard Larrousse"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1972,
+    "manufacturer": "Matra",
+    "model": "MS670",
+    "engine": "3.0L V12",
+    "class": "Group 6",
+    "drivers": [
+      "Henri Pescarolo",
+      "Graham Hill"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1971,
+    "manufacturer": "Porsche",
+    "model": "917K",
+    "engine": "4.9L Flat-12",
+    "class": "Group 5",
+    "drivers": [
+      "Helmut Marko",
+      "Gijs van Lennep"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1970,
+    "manufacturer": "Porsche",
+    "model": "917K",
+    "engine": "4.5L Flat-12",
+    "class": "Group 5",
+    "drivers": [
+      "Hans Herrmann",
+      "Richard Attwood"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1969,
+    "manufacturer": "Ford",
+    "model": "GT40",
+    "engine": "4.9L V8",
+    "class": "Group 4",
+    "drivers": [
+      "Jacky Ickx",
+      "Jackie Oliver"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1968,
+    "manufacturer": "Ford",
+    "model": "GT40",
+    "engine": "4.9L V8",
+    "class": "Group 4",
+    "drivers": [
+      "Pedro Rodr\u00edguez",
+      "Lucien Bianchi"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1967,
+    "manufacturer": "Ford",
+    "model": "GT40 Mk IV",
+    "engine": "7.0L V8",
+    "class": "Group 4",
+    "drivers": [
+      "Dan Gurney",
+      "A. J. Foyt"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1966,
+    "manufacturer": "Ford",
+    "model": "GT40 Mk II",
+    "engine": "7.0L V8",
+    "class": "Group 4",
+    "drivers": [
+      "Bruce McLaren",
+      "Chris Amon"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1965,
+    "manufacturer": "Ferrari",
+    "model": "250LM",
+    "engine": "3.3L V12",
+    "class": "Group 4",
+    "drivers": [
+      "Jochen Rindt",
+      "Masten Gregory"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1964,
+    "manufacturer": "Ferrari",
+    "model": "275P",
+    "engine": "3.3L V12",
+    "class": "Group 6",
+    "drivers": [
+      "Jean Guichet",
+      "Nino Vaccarella"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1963,
+    "manufacturer": "Ferrari",
+    "model": "250P",
+    "engine": "3.0L V12",
+    "class": "Group 6",
+    "drivers": [
+      "Lorenzo Bandini",
+      "Ludovico Scarfiotti"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1962,
+    "manufacturer": "Ferrari",
+    "model": "330TRI/LM",
+    "engine": "4.0L V12",
+    "class": "Group 6",
+    "drivers": [
+      "Oliver Gendebien",
+      "Phil Hill"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1961,
+    "manufacturer": "Ferrari",
+    "model": "250TRI",
+    "engine": "3.0L V12",
+    "class": "Group 6",
+    "drivers": [
+      "Oliver Gendebien",
+      "Phil Hill"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1960,
+    "manufacturer": "Ferrari",
+    "model": "250TR",
+    "engine": "3.0L V12",
+    "class": "Group 6",
+    "drivers": [
+      "Oliver Gendebien",
+      "Paul Fr\u00e8re"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1959,
+    "manufacturer": "Aston Martin",
+    "model": "DBR1",
+    "engine": "3.0L Inline-6",
+    "class": "Group 6",
+    "drivers": [
+      "Roy Salvadori",
+      "Carroll Shelby"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1958,
+    "manufacturer": "Ferrari",
+    "model": "250TR",
+    "engine": "3.0L V12",
+    "class": "Group 6",
+    "drivers": [
+      "Oliver Gendebien",
+      "Phil Hill"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1957,
+    "manufacturer": "Jaguar",
+    "model": "D-Type",
+    "engine": "3.4L Inline-6",
+    "class": "Group 6",
+    "drivers": [
+      "Ron Flockhart",
+      "Ivor Bueb"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1956,
+    "manufacturer": "Jaguar",
+    "model": "D-Type",
+    "engine": "3.4L Inline-6",
+    "class": "Group 6",
+    "drivers": [
+      "Ron Flockhart",
+      "Ninian Sanderson"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1955,
+    "manufacturer": "Jaguar",
+    "model": "D-Type",
+    "engine": "3.4L Inline-6",
+    "class": "Group 6",
+    "drivers": [
+      "Mike Hawthorn",
+      "Ivor Bueb"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1954,
+    "manufacturer": "Ferrari",
+    "model": "375 Plus",
+    "engine": "4.9L V12",
+    "class": "Group 6",
+    "drivers": [
+      "Jos\u00e9 Froil\u00e1n Gonz\u00e1lez",
+      "Maurice Trintignant"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1953,
+    "manufacturer": "Jaguar",
+    "model": "C-Type",
+    "engine": "3.4L Inline-6",
+    "class": "Group 6",
+    "drivers": [
+      "Tony Rolt",
+      "Duncan Hamilton"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1952,
+    "manufacturer": "Mercedes-Benz",
+    "model": "300SL",
+    "engine": "3.0L Inline-6",
+    "class": "Group 6",
+    "drivers": [
+      "Hermann Lang",
+      "Fritz Riess"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1951,
+    "manufacturer": "Jaguar",
+    "model": "C-Type",
+    "engine": "3.4L Inline-6",
+    "class": "Group 6",
+    "drivers": [
+      "Peter Walker",
+      "Peter Whitehead"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1950,
+    "manufacturer": "Talbot-Lago",
+    "model": "T26C",
+    "engine": "4.5L Inline-6",
+    "class": "Group 6",
+    "drivers": [
+      "Louis Rosier",
+      "Jean-Louis Rosier"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1949,
+    "manufacturer": "Ferrari",
+    "model": "166MM",
+    "engine": "2.0L V12",
+    "class": "Group 6",
+    "drivers": [
+      "Luigi Chinetti",
+      "Lord Selsdon"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1939,
+    "manufacturer": "Bugatti",
+    "model": "Type 57C Tank",
+    "engine": "3.3L Inline-8",
+    "class": "Group 6",
+    "drivers": [
+      "Jean-Pierre Wimille",
+      "Pierre Veyron"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1938,
+    "manufacturer": "Delahaye",
+    "model": "145",
+    "engine": "4.5L V12",
+    "class": "Group 6",
+    "drivers": [
+      "Eug\u00e8ne Chaboud",
+      "Jean Tremoulet"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1937,
+    "manufacturer": "Bugatti",
+    "model": "Type 57G Tank",
+    "engine": "3.3L Inline-8",
+    "class": "Group 6",
+    "drivers": [
+      "Jean-Pierre Wimille",
+      "Robert Benoist"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1935,
+    "manufacturer": "Lagonda",
+    "model": "M45R",
+    "engine": "4.5L Inline-6",
+    "class": "Group 6",
+    "drivers": [
+      "John Hindmarsh",
+      "Luis Fontes"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1934,
+    "manufacturer": "Alfa Romeo",
+    "model": "8C 2300",
+    "engine": "2.3L Inline-8",
+    "class": "Group 6",
+    "drivers": [
+      "Luigi Chinetti",
+      "Philippe \u00c9tancelin"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1933,
+    "manufacturer": "Alfa Romeo",
+    "model": "8C 2300",
+    "engine": "2.3L Inline-8",
+    "class": "Group 6",
+    "drivers": [
+      "Raymond Sommer",
+      "Tazio Nuvolari"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1932,
+    "manufacturer": "Alfa Romeo",
+    "model": "8C 2300",
+    "engine": "2.3L Inline-8",
+    "class": "Group 6",
+    "drivers": [
+      "Raymond Sommer",
+      "Luigi Chinetti"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1931,
+    "manufacturer": "Alfa Romeo",
+    "model": "8C 2300",
+    "engine": "2.3L Inline-8",
+    "class": "Group 6",
+    "drivers": [
+      "Earl Howe",
+      "Henry Birkin"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1930,
+    "manufacturer": "Bentley",
+    "model": "Speed Six",
+    "engine": "6.6L Inline-6",
+    "class": "Group 6",
+    "drivers": [
+      "Woolf Barnato",
+      "Glen Kidston"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1929,
+    "manufacturer": "Bentley",
+    "model": "Speed Six",
+    "engine": "6.6L Inline-6",
+    "class": "Group 6",
+    "drivers": [
+      "Woolf Barnato",
+      "Henry Birkin"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1928,
+    "manufacturer": "Bentley",
+    "model": "4\u00bd Litre",
+    "engine": "4.4L Inline-4",
+    "class": "Group 6",
+    "drivers": [
+      "Woolf Barnato",
+      "Bernard Rubin"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1927,
+    "manufacturer": "Bentley",
+    "model": "3 Litre",
+    "engine": "3.0L Inline-4",
+    "class": "Group 6",
+    "drivers": [
+      "J. Dudley Benjafield",
+      "Sammy Davis"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1926,
+    "manufacturer": "Lorraine-Dietrich",
+    "model": "B3-6",
+    "engine": "3.4L Inline-6",
+    "class": "Group 6",
+    "drivers": [
+      "Robert Bloch",
+      "Andr\u00e9 Rossignol"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1925,
+    "manufacturer": "Lorraine-Dietrich",
+    "model": "B3-6",
+    "engine": "3.4L Inline-6",
+    "class": "Group 6",
+    "drivers": [
+      "G\u00e9rard de Courcelles",
+      "Andr\u00e9 Rossignol"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1924,
+    "manufacturer": "Bentley",
+    "model": "3 Litre",
+    "engine": "3.0L Inline-4",
+    "class": "Group 6",
+    "drivers": [
+      "John Duff",
+      "Frank Clement"
+    ],
+    "isOwned": false
+  },
+  {
+    "year": 1923,
+    "manufacturer": "Chenard & Walcker",
+    "model": "Sport",
+    "engine": "3.0L Inline-4",
+    "class": "Group 6",
+    "drivers": [
+      "Andr\u00e9 Lagache",
+      "Ren\u00e9 L\u00e9onard"
+    ],
+    "isOwned": false
+  }
 ]

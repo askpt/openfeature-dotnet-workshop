@@ -8,9 +8,22 @@
         "500": 500,
         "1000": 1000,
         "2000": 2000,
-        "5000": 5000
+        "5000": 5000,
+        "10000": 10000
       },
-      "defaultVariant": "1000"
+      "defaultVariant": "0",
+      "targeting": {
+        "fractional": [
+          [
+            "0",
+            90
+          ],
+          [
+            "2000",
+            10
+          ]
+        ]
+      }
     },
     "EnableStatsHeader": {
       "state": "ENABLED",
@@ -26,7 +39,7 @@
               {
                 "var": "user_id"
               },
-              "1"
+              1
             ]
           },
           "on"
@@ -39,7 +52,15 @@
         "on": true,
         "off": false
       },
-      "defaultVariant": "off"
+      "defaultVariant": "on"
+    },
+    "EnableTabs": {
+      "state": "ENABLED",
+      "variants": {
+        "on": true,
+        "off": false
+      },
+      "defaultVariant": "on"
     }
   }
 }

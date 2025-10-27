@@ -1,8 +1,9 @@
 using System.Text.Json;
 using Garage.ApiService.Data;
-using Garage.ServiceDefaults.Services;
 using Garage.Shared.Models;
 using Microsoft.EntityFrameworkCore;
+using OpenFeature;
+using OpenFeature.Model;
 
 namespace Garage.ApiService.Services;
 
@@ -10,12 +11,14 @@ public class WinnersService(
     GarageDbContext context,
     IWebHostEnvironment environment,
     ILogger<WinnersService> logger,
-    IFeatureFlags featureFlags)
+    IFeatureClient featureClient)
     : IWinnersService
 {
     public async Task<IEnumerable<Winner>> GetAllWinnersAsync()
     {
-        return featureFlags.EnableDatabaseWinners ? await GetAllDatabaseWinnersAsync() : await GetAllJsonWinnersAsync();
+        return await featureClient.GetBooleanValueAsync("EnableDatabaseWinners", false)
+            ? await GetAllDatabaseWinnersAsync()
+            : await GetAllJsonWinnersAsync();
     }
 
     private async Task<IEnumerable<Winner>> GetAllDatabaseWinnersAsync()
@@ -35,7 +38,7 @@ public class WinnersService(
 
     private async Task<IEnumerable<Winner>> GetAllJsonWinnersAsync()
     {
-        SlowDown();
+        await SlowDownAsync();
         var dataFilePath = Path.Combine(environment.ContentRootPath, "Data", "winners.json");
         try
         {
@@ -54,9 +57,14 @@ public class WinnersService(
         }
     }
 
-    private void SlowDown()
+    private async Task SlowDownAsync()
     {
+        var evaluationContext = EvaluationContext.Builder()
+        .SetTargetingKey(Guid.NewGuid().ToString())
+        .Build();
+
         // Simulate a slow operation
-        Thread.Sleep(featureFlags.SlowOperationDelay);
+        var delay = await featureClient.GetIntegerValueAsync("SlowOperationDelay", 0, evaluationContext);
+        await Task.Delay(delay);
     }
 }
