@@ -10,13 +10,14 @@ function App() {
   useEffect(() => {
     const initializeFeatureFlags = async () => {
       try {
-        const ofrepServiceUrl = import.meta.env.VITE_GOFF_SERVICE_URL || "";
+        const ofrepServiceUrl = import.meta.env.VITE_OFREP_SERVICE_URL || "";
 
         // Get user id from local storage
-        const userId = localStorage.getItem("userId") || "default-user-id";
+        const userId = localStorage.getItem("userId") || "1";
 
         const context: EvaluationContext = {
           targetingKey: userId,
+          userId,
         };
         OpenFeature.setContext(context);
 

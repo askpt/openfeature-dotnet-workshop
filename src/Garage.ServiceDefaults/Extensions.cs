@@ -148,15 +148,10 @@ public static class Extensions
         builder.Services.AddOpenFeature(featureBuilder =>
         {
             // Get connection string from configuration
-            var connectionString = builder.Configuration.GetConnectionString("goff");
+            var connectionString = builder.Configuration["services:flagd:ofrep:0"];
             if (string.IsNullOrWhiteSpace(connectionString))
             {
                 connectionString = builder.Configuration["DEVCYCLE:URL"];
-            }
-            else
-            {
-                // remove Endpoint= from connectionString
-                connectionString = connectionString?.Replace("Endpoint=", "");
             }
 
             if (string.IsNullOrWhiteSpace(connectionString))

@@ -16,12 +16,14 @@ var database = postgres.AddDatabase("garage-db");
 //     .WithArgs("start", "--uri", "file:./flags_volume/flagd.json")
 //     .WithEndpoint(8013, 8013);
 
-// Only add goff service for local development (not during publishing/deployment)
+// Only add flagd service for local development (not during publishing/deployment)
 var isLocalDevelopment = !builder.ExecutionContext.IsPublishMode;
-var goff = isLocalDevelopment
-    ? builder.AddGoFeatureFlag("goff")
-        .WithGoffBindMount("./goff")
+var flagd = isLocalDevelopment
+    ? builder.AddFlagd("flagd")
+        .WithBindFileSync("./flags")
     : null;
+
+var ofrepEndpoint = flagd?.GetEndpoint("ofrep");
 
 var serverKey = builder.AddParameter("devcycle-server-key", secret: true);
 var devcycleUrl = builder.Configuration["DevCycle:Url"] ?? "null";
@@ -38,24 +40,24 @@ var apiServiceBuilder = builder.AddProject<Projects.Garage_ApiService>("apiservi
 
     });
 
-// Only reference goff in development
-if (isLocalDevelopment && goff != null)
+// Only reference flagd in development
+if (isLocalDevelopment && flagd != null && ofrepEndpoint != null)
 {
     apiServiceBuilder = apiServiceBuilder
-        .WithReference(goff)
-        .WaitFor(goff);
+        .WithReference(ofrepEndpoint)
+        .WaitFor(flagd);
 }
 
 var apiService = apiServiceBuilder.WithHttpHealthCheck("/health");
 
 var webFrontendBuilder = builder.AddNpmApp("webfrontend", "../Garage.React/");
 
-// Only reference goff in development
-if (isLocalDevelopment && goff != null)
+// Only reference flagd in development
+if (isLocalDevelopment && flagd != null && ofrepEndpoint != null)
 {
     webFrontendBuilder = webFrontendBuilder
-        .WithReference(goff)
-        .WaitFor(goff);
+        .WithReference(ofrepEndpoint)
+        .WaitFor(flagd);
 }
 
 webFrontendBuilder

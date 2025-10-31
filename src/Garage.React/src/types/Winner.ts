@@ -6,10 +6,11 @@ export interface Winner {
   class: string;
   drivers: string[];
   isOwned: boolean;
+  image?: string;
 }
 
 export enum FilterType {
-  All = 'All',
-  Owned = 'Owned',
-  NotOwned = 'NotOwned'
+  All = "All",
+  Owned = "Owned",
+  NotOwned = "NotOwned",
 }
