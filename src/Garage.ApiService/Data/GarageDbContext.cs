@@ -1,5 +1,5 @@
 using System.Text.Json;
-using Garage.Shared.Models;
+using Garage.ApiService.Data.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Garage.ApiService.Data;

@@ -234,7 +234,7 @@ You'll understand how integer flags can control performance characteristics and 
 
    - Examine the `EnableDatabaseWinners` flag
    - Look at `WinnersService.cs` to see how it switches between:
-     - Database source (SQLite)
+     - Database source (PostgreSQL)
      - JSON file source (`winners.json`)
 
 2. Test Data Source Switching
@@ -367,9 +367,9 @@ You will have integrated telemetry for feature flags, allowing you to monitor th
 
 **Database errors**
 
-- Ensure SQLite database is created
+- Ensure PostgreSQL database is created
 - Run database migrations if needed
-- Check file permissions
+- Check database connection settings
 
 ### Getting Help
 
