@@ -8,7 +8,6 @@ namespace Garage.ApiService.Services;
 
 public class WinnersService(
     GarageDbContext context,
-    IWebHostEnvironment environment,
     ILogger<WinnersService> logger,
     IFeatureFlags featureFlags)
     : IWinnersService
@@ -40,7 +39,7 @@ public class WinnersService(
     private async Task<IEnumerable<Winner>> GetAllJsonWinnersAsync()
     {
         SlowDown();
-        var dataFilePath = Path.Combine(environment.ContentRootPath, "Data", "winners.json");
+        var dataFilePath = Path.Combine(AppContext.BaseDirectory, "Data", "winners.json");
         try
         {
             var jsonData = await File.ReadAllTextAsync(dataFilePath);

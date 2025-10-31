@@ -36,8 +36,8 @@ public class DatabaseSeederService
             return;
         }
 
-        // Read JSON data
-        var jsonFilePath = Path.Combine(_environment.ContentRootPath, "Data", "winners.json");
+        // Read JSON data from the shared Data directory
+        var jsonFilePath = Path.Combine(AppContext.BaseDirectory, "Data", "winners.json");
         var jsonData = await File.ReadAllTextAsync(jsonFilePath, cancellationToken);
         var winners = JsonSerializer.Deserialize<Winner[]>(jsonData, new JsonSerializerOptions
         {
