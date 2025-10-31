@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="../Garage.DatabaseSeeder/Garage.DatabaseSeeder.csproj" />
     <ProjectReference Include="..\Garage.ApiService\Garage.ApiService.csproj" />
     <ProjectReference Include="..\Garage.ServiceDefaults\Garage.ServiceDefaults.csproj"
       IsAspireProjectResource="false" />
