@@ -47,8 +47,6 @@ if (isLocalDevelopment && flagd != null && ofrepEndpoint != null)
 {
     apiService = apiService
         .WithReference(ofrepEndpoint)
-        .WaitFor(flagd)
-        .WithReference(ofrepEndpoint)
         .WaitFor(flagd);
 
     webFrontend = webFrontend
