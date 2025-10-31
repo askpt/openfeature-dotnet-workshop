@@ -27,7 +27,7 @@ public class Worker : BackgroundService
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "An error occurred while migrating the database");
+            _logger.LogError(ex, "An error occurred while seeding the database");
             activity?.AddException(ex);
             throw;
         }
