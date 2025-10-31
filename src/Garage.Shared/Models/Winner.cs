@@ -6,7 +6,8 @@ public record Winner(
     string Model,
     string Engine,
     string Class,
-    string[] Drivers)
+    string[] Drivers,
+    string? Image = null)
 {
     public bool IsOwned { get; set; }
 }
