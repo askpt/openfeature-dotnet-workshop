@@ -2,7 +2,12 @@ var builder = DistributedApplication.CreateBuilder(args);
 
 var cache = builder.AddRedis("cache");
 
-var database = builder.AddSqlite("garage-db");
+var postgres = builder.AddPostgres("postgres");
+var database = postgres.AddDatabase("garage-db");
+
+var migration = builder.AddProject<Projects.Garage_DatabaseSeeder>("database-seeder")
+    .WithReference(database)
+    .WaitFor(database);
 
 var flagd = builder.AddFlagd("flagd", 8013)
     .WithBindFileSync("./flags");
@@ -12,6 +17,7 @@ var apiService = builder.AddProject<Projects.Garage_ApiService>("apiservice")
     .WaitFor(database)
     .WithReference(cache)
     .WaitFor(cache)
+    .WaitFor(migration)
     .WaitFor(flagd)
     .WithHttpHealthCheck("/health");
 

@@ -1,4 +1,4 @@
-namespace Garage.Shared.Models;
+namespace Garage.ApiService.Data.Models;
 
 public record Winner(
     int Year,
@@ -6,8 +6,7 @@ public record Winner(
     string Model,
     string Engine,
     string Class,
-    string[] Drivers,
-    string? Image = null)
+    string[] Drivers)
 {
     public bool IsOwned { get; set; }
 }
