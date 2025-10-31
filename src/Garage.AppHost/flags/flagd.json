@@ -22,10 +22,10 @@
     "enable-stats-header": {
       "state": "ENABLED",
       "variants": {
-        "enabled": true,
-        "disabled": false
+        "on": true,
+        "off": false
       },
-      "defaultVariant": "enabled"
+      "defaultVariant": "on"
     },
     "enable-tabs": {
       "state": "ENABLED",
@@ -33,7 +33,20 @@
         "enabled": true,
         "disabled": false
       },
-      "defaultVariant": "enabled"
+      "defaultVariant": "disabled",
+      "targeting": {
+        "if": [
+          {
+            "==": [
+              {
+                "var": "userId"
+              },
+              "1"
+            ]
+          },
+          "enabled"
+        ]
+      }
     }
   }
 }

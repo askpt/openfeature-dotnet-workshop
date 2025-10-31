@@ -68,6 +68,41 @@
   color: #17a2b8;
 }
 
+.user-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e9ecef;
+}
+
+.user-id-label {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.change-user-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.change-user-btn:hover {
+  background: #0056b3;
+}
+
+.change-user-btn:active {
+  background: #004085;
+}
+
 .collection-summary {
   margin-bottom: 15px;
   color: #666;

@@ -11,6 +11,9 @@ const Home = () => {
   const [error, setError] = useState<string | null>(null);
   const [showHeader, setShowHeader] = useState(true);
   const [showTabs, setShowTabs] = useState(true);
+  const [currentUserId, setCurrentUserId] = useState<string>(
+    localStorage.getItem("userId") || "1"
+  );
 
   const ownedCount = winners.filter((w) => w.isOwned).length;
 
@@ -86,6 +89,16 @@ const Home = () => {
     setActiveFilter(filterType);
   };
 
+  const handleChangeUserId = () => {
+    const newUserId = prompt("Enter new user ID:", currentUserId);
+    if (newUserId && newUserId.trim() !== "") {
+      localStorage.setItem("userId", newUserId.trim());
+      setCurrentUserId(newUserId.trim());
+      // Reload the page to reinitialize OpenFeature with the new user ID
+      window.location.reload();
+    }
+  };
+
   if (loading) {
     return <div className="loading">Loading winners...</div>;
   }
@@ -128,6 +141,12 @@ const Home = () => {
                 <span className="stat-label">Complete</span>
               </div>
             </div>
+          </div>
+          <div className="user-section">
+            <span className="user-id-label">User ID: {currentUserId}</span>
+            <button className="change-user-btn" onClick={handleChangeUserId}>
+              Change User
+            </button>
           </div>
         </div>
       )}
