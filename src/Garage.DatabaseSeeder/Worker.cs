@@ -1,23 +1,33 @@
+using System.Diagnostics;
+
 namespace Garage.DatabaseSeeder;
 
 public class Worker : BackgroundService
 {
-    private readonly ILogger<Worker> _logger;
+    public const string ActivitySourceName = "Migrations";
+    private static readonly ActivitySource s_activitySource = new(ActivitySourceName);
 
-    public Worker(ILogger<Worker> logger)
+    private readonly ILogger<Worker> _logger;
+    private readonly DatabaseSeederService _databaseSeederService;
+
+    public Worker(ILogger<Worker> logger, DatabaseSeederService databaseSeederService)
     {
         _logger = logger;
+        _databaseSeederService = databaseSeederService;
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        while (!stoppingToken.IsCancellationRequested)
+        using var activity = s_activitySource.StartActivity("Migrating database", ActivityKind.Client);
+        try
         {
-            if (_logger.IsEnabled(LogLevel.Information))
-            {
-                _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-            }
-            await Task.Delay(1000, stoppingToken);
+            await _databaseSeederService.SeedDatabaseAsync(stoppingToken);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "An error occurred while migrating the database");
+            activity?.AddException(ex);
+            throw;
         }
     }
 }
