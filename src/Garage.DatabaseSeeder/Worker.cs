@@ -9,11 +9,13 @@ public class Worker : BackgroundService
 
     private readonly ILogger<Worker> _logger;
     private readonly DatabaseSeederService _databaseSeederService;
+    private readonly IHostApplicationLifetime _hostApplicationLifetime;
 
-    public Worker(ILogger<Worker> logger, DatabaseSeederService databaseSeederService)
+    public Worker(ILogger<Worker> logger, DatabaseSeederService databaseSeederService, IHostApplicationLifetime hostApplicationLifetime)
     {
         _logger = logger;
         _databaseSeederService = databaseSeederService;
+        _hostApplicationLifetime = hostApplicationLifetime;
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -29,5 +31,7 @@ public class Worker : BackgroundService
             activity?.AddException(ex);
             throw;
         }
+
+        _hostApplicationLifetime.StopApplication();
     }
 }
