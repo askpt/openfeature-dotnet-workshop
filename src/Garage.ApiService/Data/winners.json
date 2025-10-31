@@ -10,7 +10,22 @@
       "Yifei Ye",
       "Phil Hanson"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/ferrari-499p-2025/800/600"
+  },
+  {
+    "year": 2024,
+    "manufacturer": "Ferrari",
+    "model": "499P",
+    "engine": "3.0L V6 Twin-Turbo Hybrid",
+    "class": "Hypercar",
+    "drivers": [
+      "Antonio Fuoco",
+      "Miguel Molina",
+      "Nicklas Nielsen"
+    ],
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/ferrari-499p-2024/800/600"
   },
   {
     "year": 2023,
@@ -21,9 +36,10 @@
     "drivers": [
       "Alessandro Pier Guidi",
       "James Calado",
-      "Ant\u00f3nio Giovinazzi"
+      "António Giovinazzi"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/ferrari-499p-2023/800/600"
   },
   {
     "year": 2022,
@@ -33,10 +49,11 @@
     "class": "Hypercar",
     "drivers": [
       "Brendon Hartley",
-      "S\u00e9bastien Buemi",
+      "Sébastien Buemi",
       "Ryo Hirakawa"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/toyota-gr010-hybrid-2022/800/600"
   },
   {
     "year": 2021,
@@ -47,9 +64,10 @@
     "drivers": [
       "Mike Conway",
       "Kamui Kobayashi",
-      "Jos\u00e9 Mar\u00eda L\u00f3pez"
+      "José María López"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/toyota-gr010-hybrid-2021/800/600"
   },
   {
     "year": 2020,
@@ -58,11 +76,12 @@
     "engine": "2.4L V6 Twin-Turbo Hybrid",
     "class": "LMP1",
     "drivers": [
-      "S\u00e9bastien Buemi",
+      "Sébastien Buemi",
       "Kazuki Nakajima",
       "Brendon Hartley"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/toyota-ts050-hybrid-2020/800/600"
   },
   {
     "year": 2019,
@@ -73,9 +92,10 @@
     "drivers": [
       "Mike Conway",
       "Kamui Kobayashi",
-      "Jos\u00e9 Mar\u00eda L\u00f3pez"
+      "José María López"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/toyota-ts050-hybrid-2019/800/600"
   },
   {
     "year": 2018,
@@ -84,11 +104,12 @@
     "engine": "2.4L V6 Twin-Turbo Hybrid",
     "class": "LMP1",
     "drivers": [
-      "S\u00e9bastien Buemi",
+      "Sébastien Buemi",
       "Kazuki Nakajima",
       "Fernando Alonso"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/toyota-ts050-hybrid-2018/800/600"
   },
   {
     "year": 2017,
@@ -101,7 +122,8 @@
       "Timo Bernhard",
       "Brendon Hartley"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/porsche-919-hybrid-2017/800/600"
   },
   {
     "year": 2016,
@@ -114,7 +136,8 @@
       "Neel Jani",
       "Marc Lieb"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/porsche-919-hybrid-2016/800/600"
   },
   {
     "year": 2015,
@@ -123,11 +146,12 @@
     "engine": "2.0L V4 Turbo Hybrid",
     "class": "LMP1",
     "drivers": [
-      "Nico H\u00fclkenberg",
+      "Nico Hülkenberg",
       "Nick Tandy",
       "Earl Bamber"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/porsche-919-hybrid-2015/800/600"
   },
   {
     "year": 2014,
@@ -136,11 +160,12 @@
     "engine": "3.7L V6 TDI Hybrid",
     "class": "LMP1",
     "drivers": [
-      "Marcel F\u00e4ssler",
-      "Andr\u00e9 Lotterer",
-      "Benoit Tr\u00e9luyer"
+      "Marcel Fässler",
+      "André Lotterer",
+      "Benoit Tréluyer"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/audi-r18-e-tron-quattro-2014/800/600"
   },
   {
     "year": 2013,
@@ -149,11 +174,12 @@
     "engine": "3.7L V6 TDI Hybrid",
     "class": "LMP1",
     "drivers": [
-      "Lo\u00efc Duval",
+      "Loïc Duval",
       "Tom Kristensen",
       "Allan McNish"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/audi-r18-e-tron-quattro-2013/800/600"
   },
   {
     "year": 2012,
@@ -162,11 +188,12 @@
     "engine": "3.7L V6 TDI Hybrid",
     "class": "LMP1",
     "drivers": [
-      "Andr\u00e9 Lotterer",
-      "Benoit Tr\u00e9luyer",
-      "Marcel F\u00e4ssler"
+      "André Lotterer",
+      "Benoit Tréluyer",
+      "Marcel Fässler"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/audi-r18-e-tron-quattro-2012/800/600"
   },
   {
     "year": 2011,
@@ -175,11 +202,12 @@
     "engine": "3.7L V6 TDI",
     "class": "LMP1",
     "drivers": [
-      "Andr\u00e9 Lotterer",
-      "Benoit Tr\u00e9luyer",
-      "Marcel F\u00e4ssler"
+      "André Lotterer",
+      "Benoit Tréluyer",
+      "Marcel Fässler"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/audi-r18-tdi-2011/800/600"
   },
   {
     "year": 2010,
@@ -192,7 +220,8 @@
       "Romain Dumas",
       "Mike Rockenfeller"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/audi-r15-tdi-2010/800/600"
   },
   {
     "year": 2009,
@@ -205,7 +234,8 @@
       "Tom Kristensen",
       "Allan McNish"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/audi-r15-tdi-2009/800/600"
   },
   {
     "year": 2008,
@@ -218,7 +248,8 @@
       "Tom Kristensen",
       "Allan McNish"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/audi-r10-tdi-2008/800/600"
   },
   {
     "year": 2007,
@@ -231,7 +262,8 @@
       "Emanuele Pirro",
       "Marco Werner"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/audi-r10-tdi-2007/800/600"
   },
   {
     "year": 2006,
@@ -244,7 +276,8 @@
       "Emanuele Pirro",
       "Marco Werner"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/audi-r10-tdi-2006/800/600"
   },
   {
     "year": 2005,
@@ -257,7 +290,8 @@
       "Emanuele Pirro",
       "Marco Werner"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/audi-r8-2005/800/600"
   },
   {
     "year": 2004,
@@ -270,7 +304,8 @@
       "Tom Kristensen",
       "Seiji Ara"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/audi-r8-2004/800/600"
   },
   {
     "year": 2003,
@@ -283,7 +318,8 @@
       "Rinaldo Capello",
       "Guy Smith"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/bentley-speed-8-2003/800/600"
   },
   {
     "year": 2002,
@@ -296,7 +332,8 @@
       "Tom Kristensen",
       "Emanuele Pirro"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/audi-r8-2002/800/600"
   },
   {
     "year": 2001,
@@ -309,7 +346,8 @@
       "Tom Kristensen",
       "Emanuele Pirro"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/audi-r8-2001/800/600"
   },
   {
     "year": 2000,
@@ -322,7 +360,8 @@
       "Tom Kristensen",
       "Emanuele Pirro"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/audi-r8-2000/800/600"
   },
   {
     "year": 1999,
@@ -335,7 +374,8 @@
       "Pierluigi Martini",
       "Yannick Dalmas"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/bmw-v12-lmr-1999/800/600"
   },
   {
     "year": 1998,
@@ -345,10 +385,11 @@
     "class": "GT1",
     "drivers": [
       "Allan McNish",
-      "Laurent A\u00efello",
-      "St\u00e9phane Ortelli"
+      "Laurent Aïello",
+      "Stéphane Ortelli"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/porsche-911-gt1-98-1998/800/600"
   },
   {
     "year": 1997,
@@ -357,11 +398,12 @@
     "engine": "3.2L Flat-6 Twin-Turbo",
     "class": "GT1",
     "drivers": [
-      "Joerg M\u00fcller",
+      "Joerg Müller",
       "Tom Kristensen",
       "Michele Alboreto"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/porsche-911-gt1-1997/800/600"
   },
   {
     "year": 1996,
@@ -374,7 +416,8 @@
       "Manuel Reuter",
       "Alexander Wurz"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/porsche-911-gt1-1996/800/600"
   },
   {
     "year": 1995,
@@ -387,7 +430,8 @@
       "Masanori Sekiya",
       "Volker Weidler"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/mclaren-f1-gtr-1995/800/600"
   },
   {
     "year": 1994,
@@ -400,7 +444,8 @@
       "Mauro Baldi",
       "Hurley Haywood"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/porsche-962c-1994/800/600"
   },
   {
     "year": 1993,
@@ -411,9 +456,10 @@
     "drivers": [
       "Geoff Brabham",
       "Christophe Bouchut",
-      "Eric H\u00e9lary"
+      "Eric Hélary"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/peugeot-905-evo-1-bis-1993/800/600"
   },
   {
     "year": 1992,
@@ -426,7 +472,8 @@
       "Yannick Dalmas",
       "Mark Blundell"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/peugeot-905b-1992/800/600"
   },
   {
     "year": 1991,
@@ -439,7 +486,8 @@
       "Johnny Herbert",
       "Bertrand Gachot"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/mazda-787b-1991/800/600"
   },
   {
     "year": 1990,
@@ -452,7 +500,8 @@
       "Price Cobb",
       "Martin Brundle"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/jaguar-xjr-12-1990/800/600"
   },
   {
     "year": 1989,
@@ -465,7 +514,8 @@
       "Manuel Reuter",
       "Stanley Dickens"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/mercedes-benz-c9-1989/800/600"
   },
   {
     "year": 1988,
@@ -478,7 +528,8 @@
       "Johnny Dumfries",
       "Andy Wallace"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/jaguar-xjr-9-1988/800/600"
   },
   {
     "year": 1987,
@@ -491,7 +542,8 @@
       "Hans-Joachim Stuck",
       "Al Holbert"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/porsche-962c-1987/800/600"
   },
   {
     "year": 1986,
@@ -504,7 +556,8 @@
       "Hans-Joachim Stuck",
       "Al Holbert"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/porsche-962c-1986/800/600"
   },
   {
     "year": 1985,
@@ -517,7 +570,8 @@
       "Paolo Barilla",
       "John Winter"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/porsche-962c-1985/800/600"
   },
   {
     "year": 1984,
@@ -529,7 +583,8 @@
       "Henri Pescarolo",
       "Klaus Ludwig"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/porsche-956-1984/800/600"
   },
   {
     "year": 1983,
@@ -542,7 +597,8 @@
       "Hurley Haywood",
       "Al Holbert"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/porsche-956-1983/800/600"
   },
   {
     "year": 1982,
@@ -554,7 +610,8 @@
       "Derek Bell",
       "Jacky Ickx"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/porsche-956-1982/800/600"
   },
   {
     "year": 1981,
@@ -566,7 +623,8 @@
       "Derek Bell",
       "Jacky Ickx"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/porsche-936/81-1981/800/600"
   },
   {
     "year": 1980,
@@ -578,7 +636,8 @@
       "Jean Rondeau",
       "Jean-Pierre Jaussaud"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/rondeau-m379b-1980/800/600"
   },
   {
     "year": 1979,
@@ -591,7 +650,8 @@
       "Bill Whittington",
       "Don Whittington"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/porsche-935-k3-1979/800/600"
   },
   {
     "year": 1978,
@@ -603,7 +663,8 @@
       "Jean-Pierre Jaussaud",
       "Didier Pironi"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/renault-a442b-1978/800/600"
   },
   {
     "year": 1977,
@@ -613,10 +674,11 @@
     "class": "Group 6",
     "drivers": [
       "Jacky Ickx",
-      "J\u00fcrgen Barth",
+      "Jürgen Barth",
       "Hurley Haywood"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/porsche-936-1977/800/600"
   },
   {
     "year": 1976,
@@ -628,7 +690,8 @@
       "Jacky Ickx",
       "Gijs van Lennep"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/porsche-936-1976/800/600"
   },
   {
     "year": 1975,
@@ -640,7 +703,8 @@
       "Derek Bell",
       "Jacky Ickx"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/gulf-mirage-gr8-1975/800/600"
   },
   {
     "year": 1974,
@@ -650,9 +714,10 @@
     "class": "Group 6",
     "drivers": [
       "Henri Pescarolo",
-      "G\u00e9rard Larrousse"
+      "Gérard Larrousse"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/matra-ms670c-1974/800/600"
   },
   {
     "year": 1973,
@@ -662,9 +727,10 @@
     "class": "Group 6",
     "drivers": [
       "Henri Pescarolo",
-      "G\u00e9rard Larrousse"
+      "Gérard Larrousse"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/matra-ms670b-1973/800/600"
   },
   {
     "year": 1972,
@@ -676,7 +742,8 @@
       "Henri Pescarolo",
       "Graham Hill"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/matra-ms670-1972/800/600"
   },
   {
     "year": 1971,
@@ -688,7 +755,8 @@
       "Helmut Marko",
       "Gijs van Lennep"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/porsche-917k-1971/800/600"
   },
   {
     "year": 1970,
@@ -700,7 +768,8 @@
       "Hans Herrmann",
       "Richard Attwood"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/porsche-917k-1970/800/600"
   },
   {
     "year": 1969,
@@ -712,7 +781,8 @@
       "Jacky Ickx",
       "Jackie Oliver"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/ford-gt40-1969/800/600"
   },
   {
     "year": 1968,
@@ -721,10 +791,11 @@
     "engine": "4.9L V8",
     "class": "Group 4",
     "drivers": [
-      "Pedro Rodr\u00edguez",
+      "Pedro Rodríguez",
       "Lucien Bianchi"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/ford-gt40-1968/800/600"
   },
   {
     "year": 1967,
@@ -736,7 +807,8 @@
       "Dan Gurney",
       "A. J. Foyt"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/ford-gt40-mk-iv-1967/800/600"
   },
   {
     "year": 1966,
@@ -748,7 +820,8 @@
       "Bruce McLaren",
       "Chris Amon"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/ford-gt40-mk-ii-1966/800/600"
   },
   {
     "year": 1965,
@@ -760,7 +833,8 @@
       "Jochen Rindt",
       "Masten Gregory"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/ferrari-250lm-1965/800/600"
   },
   {
     "year": 1964,
@@ -772,7 +846,8 @@
       "Jean Guichet",
       "Nino Vaccarella"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/ferrari-275p-1964/800/600"
   },
   {
     "year": 1963,
@@ -784,7 +859,8 @@
       "Lorenzo Bandini",
       "Ludovico Scarfiotti"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/ferrari-250p-1963/800/600"
   },
   {
     "year": 1962,
@@ -796,7 +872,8 @@
       "Oliver Gendebien",
       "Phil Hill"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/ferrari-330tri/lm-1962/800/600"
   },
   {
     "year": 1961,
@@ -808,7 +885,8 @@
       "Oliver Gendebien",
       "Phil Hill"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/ferrari-250tri-1961/800/600"
   },
   {
     "year": 1960,
@@ -818,9 +896,10 @@
     "class": "Group 6",
     "drivers": [
       "Oliver Gendebien",
-      "Paul Fr\u00e8re"
+      "Paul Frère"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/ferrari-250tr-1960/800/600"
   },
   {
     "year": 1959,
@@ -832,7 +911,8 @@
       "Roy Salvadori",
       "Carroll Shelby"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/aston-martin-dbr1-1959/800/600"
   },
   {
     "year": 1958,
@@ -844,7 +924,8 @@
       "Oliver Gendebien",
       "Phil Hill"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/ferrari-250tr-1958/800/600"
   },
   {
     "year": 1957,
@@ -856,7 +937,8 @@
       "Ron Flockhart",
       "Ivor Bueb"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/jaguar-d-type-1957/800/600"
   },
   {
     "year": 1956,
@@ -868,7 +950,8 @@
       "Ron Flockhart",
       "Ninian Sanderson"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/jaguar-d-type-1956/800/600"
   },
   {
     "year": 1955,
@@ -880,7 +963,8 @@
       "Mike Hawthorn",
       "Ivor Bueb"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/jaguar-d-type-1955/800/600"
   },
   {
     "year": 1954,
@@ -889,10 +973,11 @@
     "engine": "4.9L V12",
     "class": "Group 6",
     "drivers": [
-      "Jos\u00e9 Froil\u00e1n Gonz\u00e1lez",
+      "José Froilán González",
       "Maurice Trintignant"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/ferrari-375-plus-1954/800/600"
   },
   {
     "year": 1953,
@@ -904,7 +989,8 @@
       "Tony Rolt",
       "Duncan Hamilton"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/jaguar-c-type-1953/800/600"
   },
   {
     "year": 1952,
@@ -916,7 +1002,8 @@
       "Hermann Lang",
       "Fritz Riess"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/mercedes-benz-300sl-1952/800/600"
   },
   {
     "year": 1951,
@@ -928,7 +1015,8 @@
       "Peter Walker",
       "Peter Whitehead"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/jaguar-c-type-1951/800/600"
   },
   {
     "year": 1950,
@@ -940,7 +1028,8 @@
       "Louis Rosier",
       "Jean-Louis Rosier"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/talbot-lago-t26c-1950/800/600"
   },
   {
     "year": 1949,
@@ -952,7 +1041,8 @@
       "Luigi Chinetti",
       "Lord Selsdon"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/ferrari-166mm-1949/800/600"
   },
   {
     "year": 1939,
@@ -964,7 +1054,8 @@
       "Jean-Pierre Wimille",
       "Pierre Veyron"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/bugatti-type-57c-tank-1939/800/600"
   },
   {
     "year": 1938,
@@ -973,10 +1064,11 @@
     "engine": "4.5L V12",
     "class": "Group 6",
     "drivers": [
-      "Eug\u00e8ne Chaboud",
+      "Eugène Chaboud",
       "Jean Tremoulet"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/delahaye-145-1938/800/600"
   },
   {
     "year": 1937,
@@ -988,7 +1080,8 @@
       "Jean-Pierre Wimille",
       "Robert Benoist"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/bugatti-type-57g-tank-1937/800/600"
   },
   {
     "year": 1935,
@@ -1000,7 +1093,8 @@
       "John Hindmarsh",
       "Luis Fontes"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/lagonda-m45r-1935/800/600"
   },
   {
     "year": 1934,
@@ -1010,9 +1104,10 @@
     "class": "Group 6",
     "drivers": [
       "Luigi Chinetti",
-      "Philippe \u00c9tancelin"
+      "Philippe Étancelin"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/alfa-romeo-8c-2300-1934/800/600"
   },
   {
     "year": 1933,
@@ -1024,7 +1119,8 @@
       "Raymond Sommer",
       "Tazio Nuvolari"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/alfa-romeo-8c-2300-1933/800/600"
   },
   {
     "year": 1932,
@@ -1036,7 +1132,8 @@
       "Raymond Sommer",
       "Luigi Chinetti"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/alfa-romeo-8c-2300-1932/800/600"
   },
   {
     "year": 1931,
@@ -1048,7 +1145,8 @@
       "Earl Howe",
       "Henry Birkin"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/alfa-romeo-8c-2300-1931/800/600"
   },
   {
     "year": 1930,
@@ -1060,7 +1158,8 @@
       "Woolf Barnato",
       "Glen Kidston"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/bentley-speed-six-1930/800/600"
   },
   {
     "year": 1929,
@@ -1072,19 +1171,21 @@
       "Woolf Barnato",
       "Henry Birkin"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/bentley-speed-six-1929/800/600"
   },
   {
     "year": 1928,
     "manufacturer": "Bentley",
-    "model": "4\u00bd Litre",
+    "model": "4½ Litre",
     "engine": "4.4L Inline-4",
     "class": "Group 6",
     "drivers": [
       "Woolf Barnato",
       "Bernard Rubin"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/bentley-4½-litre-1928/800/600"
   },
   {
     "year": 1927,
@@ -1096,7 +1197,8 @@
       "J. Dudley Benjafield",
       "Sammy Davis"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/bentley-3-litre-1927/800/600"
   },
   {
     "year": 1926,
@@ -1106,9 +1208,10 @@
     "class": "Group 6",
     "drivers": [
       "Robert Bloch",
-      "Andr\u00e9 Rossignol"
+      "André Rossignol"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/lorraine-dietrich-b3-6-1926/800/600"
   },
   {
     "year": 1925,
@@ -1117,10 +1220,11 @@
     "engine": "3.4L Inline-6",
     "class": "Group 6",
     "drivers": [
-      "G\u00e9rard de Courcelles",
-      "Andr\u00e9 Rossignol"
+      "Gérard de Courcelles",
+      "André Rossignol"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/lorraine-dietrich-b3-6-1925/800/600"
   },
   {
     "year": 1924,
@@ -1132,7 +1236,8 @@
       "John Duff",
       "Frank Clement"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/bentley-3-litre-1924/800/600"
   },
   {
     "year": 1923,
@@ -1141,9 +1246,10 @@
     "engine": "3.0L Inline-4",
     "class": "Group 6",
     "drivers": [
-      "Andr\u00e9 Lagache",
-      "Ren\u00e9 L\u00e9onard"
+      "André Lagache",
+      "René Léonard"
     ],
-    "isOwned": false
+    "isOwned": false,
+    "image": "https://picsum.photos/seed/chenard-&-walcker-sport-1923/800/600"
   }
 ]
