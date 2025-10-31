@@ -22,9 +22,13 @@ public class WinnersService(
     {
         try
         {
-            return await context.Winners
+            var winnersDatabase = await context.Winners
                 .OrderByDescending(w => w.Year)
                 .ToListAsync();
+
+            var mapper = new WinnerMapper();
+
+            return winnersDatabase.Select(mapper.WinnerToWinnerDto);
         }
         catch (Exception ex)
         {
