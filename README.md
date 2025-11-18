@@ -51,7 +51,7 @@ The workshop demonstrates these feature flags:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/open-feature/openfeature-dotnet-workshop.git
+git clone https://github.com/askpt/openfeature-dotnet-workshop.git
 cd openfeature-dotnet-workshop
 ```
 
