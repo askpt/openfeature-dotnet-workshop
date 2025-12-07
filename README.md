@@ -1,6 +1,6 @@
 # OpenFeature .NET Workshop: Le Mans Winners Management System
 
-[![.NET 9.0](https://img.shields.io/badge/.NET-9.0-512BD4?logo=dotnet)](https://dotnet.microsoft.com/)
+[![.NET 10.0](https://img.shields.io/badge/.NET-10.0-512BD4?logo=dotnet)](https://dotnet.microsoft.com/)
 [![Aspire](https://img.shields.io/badge/Aspire-Enabled-purple)](https://learn.microsoft.com/en-us/dotnet/aspire/)
 [![OpenFeature](https://img.shields.io/badge/OpenFeature-Ready-green)](https://openfeature.dev/)
 
@@ -51,7 +51,7 @@ The workshop demonstrates these feature flags:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/open-feature/openfeature-dotnet-workshop.git
+git clone https://github.com/askpt/openfeature-dotnet-workshop.git
 cd openfeature-dotnet-workshop
 ```
 
