@@ -11,16 +11,13 @@ builder.AddRedisDistributedCache("cache");
 builder.AddServiceDefaults();
 
 // Add database
-builder.AddSqliteDbContext<GarageDbContext>("garage-db");
+builder.AddNpgsqlDbContext<GarageDbContext>("garage-db");
 
 // Add services to the container.
 builder.Services.AddProblemDetails();
 
 // Register both the winner service
 builder.Services.AddScoped<IWinnersService, WinnersService>();
-
-// Register seeder service
-builder.Services.AddSingleton<DatabaseSeederService>();
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
@@ -29,13 +26,6 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 app.UseExceptionHandler();
-
-// Seed the database
-using (var scope = app.Services.CreateScope())
-{
-    var seeder = scope.ServiceProvider.GetRequiredService<DatabaseSeederService>();
-    await seeder.SeedDatabaseAsync();
-}
 
 if (app.Environment.IsDevelopment())
 {

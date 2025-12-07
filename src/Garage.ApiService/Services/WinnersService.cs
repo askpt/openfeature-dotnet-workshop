@@ -8,7 +8,6 @@ namespace Garage.ApiService.Services;
 
 public class WinnersService(
     GarageDbContext context,
-    IWebHostEnvironment environment,
     ILogger<WinnersService> logger,
     IFeatureFlags featureFlags)
     : IWinnersService
@@ -22,9 +21,13 @@ public class WinnersService(
     {
         try
         {
-            return await context.Winners
+            var winnersDatabase = await context.Winners
                 .OrderByDescending(w => w.Year)
                 .ToListAsync();
+
+            var mapper = new WinnerMapper();
+
+            return winnersDatabase.Select(mapper.WinnerToWinnerDto);
         }
         catch (Exception ex)
         {
@@ -36,7 +39,7 @@ public class WinnersService(
     private async Task<IEnumerable<Winner>> GetAllJsonWinnersAsync()
     {
         SlowDown();
-        var dataFilePath = Path.Combine(environment.ContentRootPath, "Data", "winners.json");
+        var dataFilePath = Path.Combine(AppContext.BaseDirectory, "Data", "winners.json");
         try
         {
             var jsonData = await File.ReadAllTextAsync(dataFilePath);

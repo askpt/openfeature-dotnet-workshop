@@ -77,6 +77,8 @@ You should see the statistics header toggle on and off based on your feature fla
 - How to integrate OpenFeature into a .NET application
 - Implementing a custom feature flag provider
 
+### Tasks
+
 1. Install OpenFeature Dependencies
 
    ```bash
@@ -124,6 +126,8 @@ see the custom provider in action, and the feature flags should be evaluated bas
 - Configuring OpenFeature with `flagd`
 - Real-time flag updates without application restarts
 
+### Tasks
+
 1. Install the flagd Provider
 
    ```bash
@@ -135,16 +139,19 @@ see the custom provider in action, and the feature flags should be evaluated bas
    - Open `src/Garage.ServiceDefaults/Extensions.cs`
    - Add the `FlagdProvider` to the OpenFeature configuration
 
-3. Set Up flagd
+3. Set Up flagd container
 
-   - Open `src/Garage.AppHost/Program.cs`
+   - Install the package
+
+   ```bash
+   dotnet add src/Garage.AppHost package CommunityToolkit.Aspire.Hosting.Flagd
+   ```
+
    - Configure the `FlagdProvider` with the correct endpoint
 
    ```csharp
-   var flagd = builder.AddContainer("flagd", "ghcr.io/open-feature/flagd:latest")
-       .WithBindMount("flags","/flags")
-       .WithArgs("start", "--uri", "file:./flags/flagd.json")
-       .WithEndpoint(8013, 8013);
+   var flagd = builder.AddFlagd("flagd", 8013)
+                   .WithBindFileSync("flags/");
    ```
 
 4. Configure the flagd dependents
@@ -230,7 +237,7 @@ You'll understand how integer flags can control performance characteristics and 
 
    - Examine the `EnableDatabaseWinners` flag
    - Look at `WinnersService.cs` to see how it switches between:
-     - Database source (SQLite)
+     - Database source (PostgreSQL)
      - JSON file source (`winners.json`)
 
 2. Test Data Source Switching
@@ -363,9 +370,9 @@ You will have integrated telemetry for feature flags, allowing you to monitor th
 
 **Database errors**
 
-- Ensure SQLite database is created
+- Ensure PostgreSQL database is created
 - Run database migrations if needed
-- Check file permissions
+- Check database connection settings
 
 ### Getting Help
 
@@ -381,9 +388,13 @@ You will have integrated telemetry for feature flags, allowing you to monitor th
 Congratulations! You've completed the OpenFeature .NET workshop. You should now understand:
 
 ✅ Basic feature flag implementation
+
 ✅ Performance tuning with feature flags
+
 ✅ Architectural decisions using flags
+
 ✅ OpenFeature provider integration
+
 ✅ Advanced targeting and evaluation
 
 ### Next Steps
